@@ -1,0 +1,28 @@
+!!!
+%html
+  %head
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = display_meta_tags site: 'Клеопатра банкет-холл', reverse: true, separator: 'on'
+  %body
+    %header#header
+      %section.menu
+        Свадьбы
+        Юбилеи
+        Выпускные
+        Корпоративы
+
+      %section.logo
+        = image_tag 'logo.png'
+
+      %section.address
+        тел. 8 922 754 4440 
+        %br/
+        г. Магнитогорск ул. Советская 209а
+
+    %section#body
+      = yield
+
+    %section#footer
+      
