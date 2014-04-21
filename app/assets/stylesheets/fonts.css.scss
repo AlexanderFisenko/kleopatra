@@ -1,6 +1,13 @@
 @font-face{
-    font-family: 'Corki';
+    font-family: 'corki';
     src: font-url("/assets/Corki.otf") unquote("format('opentype')");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'avant';
+    src: font-url("/assets/avant.ttf") unquote("format('opentype')");
     font-weight: normal;
     font-style: normal;
 }

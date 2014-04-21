@@ -7,19 +7,33 @@
     = display_meta_tags site: 'Клеопатра банкет-холл', reverse: true, separator: 'on'
   %body
     %header#header
-      %section.menu
-        Свадьбы
-        Юбилеи
-        Выпускные
-        Корпоративы
+      %section.nav
+        %p
+          ВАШИ
+        %br/
+        СВАДЬБЫ
+        = image_tag 'kvadrat.png'
+        ЮБИЛЕИ
+        = image_tag 'kvadrat.png'
+        ВЫПУСКНЫЕ
+        = image_tag 'kvadrat.png'
+        КОРПОРАТИВЫ
 
       %section.logo
         = image_tag 'logo.png'
 
       %section.address
-        тел. 8 922 754 4440 
+        тел. 8
+        = image_tag 'kvadrat.png'
+        922
+        = image_tag 'kvadrat.png'
+        754
+        = image_tag 'kvadrat.png'
+        4440 
         %br/
-        г. Магнитогорск ул. Советская 209а
+        г. Магнитогорск
+        = image_tag 'kvadrat.png'
+        ул. Советская 209а
 
     %section#body
       = yield
