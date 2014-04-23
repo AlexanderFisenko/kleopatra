@@ -28,6 +28,7 @@ gem 'meta-tags', :require => 'meta_tags'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bourbon'
 gem 'neat', '~> 1.5.0'
+gem 'font-awesome-rails', '~> 4.0.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
