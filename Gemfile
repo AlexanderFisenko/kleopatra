@@ -23,13 +23,22 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'haml-rails'
-gem 'sqlite3'
+
+group :production do
+  gem 'mysql2'
+end
+
+group :development do
+  gem 'sqlite3'
+end
 gem 'meta-tags', :require => 'meta_tags'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bourbon'
 gem 'neat', '~> 1.5.0'
 gem 'font-awesome-rails', '~> 4.0.3'
 
+gem 'capistrano', '2.13.5'
+gem 'unicorn'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
