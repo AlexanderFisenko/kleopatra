@@ -39,6 +39,10 @@ gem 'font-awesome-rails', '~> 4.0.3'
 
 gem 'capistrano', '2.13.5'
 gem 'unicorn'
+
+gem 'execjs'
+
+gem 'therubyracer', '~> 0.10.2'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
