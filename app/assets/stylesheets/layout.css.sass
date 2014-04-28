@@ -1,10 +1,7 @@
 body
   header#header
     @include outer-container
-    top: 0
-    left: 0
-    width: 100%
-    height: 170px
+    @include row(table)
     padding: 2px 10px
     background: white
     margin-top: 24px
@@ -14,26 +11,29 @@ body
 
 
     section.nav
-      @include span-columns(4)
+      @include span-columns(4, table)
       text-align: center
       vertical-align: bottom
-      display: inline-block
+
       h1
         color: $secondary_color
         font-size: 44px
         line-height: 1
+        text-align: left
       >span
         font-size: 16px
 
     section.logo
-      @include span-columns(4)
+      @include span-columns(4, table)
       >img
         @include fill-parent
 
     section.address
-      @include span-columns(4)
+      @include span-columns(4, table)
       font-size: 18px
       text-align: center
+      vertical-align: bottom
+
 
     i.fa
       font-size: 6px
