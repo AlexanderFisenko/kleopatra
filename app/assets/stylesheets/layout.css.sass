@@ -12,7 +12,7 @@ body
 
     section.nav
       @include span-columns(4, table)
-      text-align: center
+      text-align: left
       vertical-align: bottom
 
       h1
@@ -25,13 +25,15 @@ body
 
     section.logo
       @include span-columns(4, table)
+      padding-bottom: 30px
       >img
         @include fill-parent
 
     section.address
       @include span-columns(4, table)
+      @include omega(table)
       font-size: 18px
-      text-align: center
+      text-align: right
       vertical-align: bottom
 
 
