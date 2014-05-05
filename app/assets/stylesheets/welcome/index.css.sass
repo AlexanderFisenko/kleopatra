@@ -7,7 +7,9 @@ article#welcome
       @include fill-parent
 
   section.info
+    @include outer-container
     section.wrapper
+
       @include span-columns(10)
       @include shift(1)
       
@@ -24,9 +26,9 @@ article#welcome
         h1
           @include span-columns(2 of 20, collapse)
           text-align: center
-          font-size: 44px
-          padding-top: 20px
-          padding-bottom: 20px
+          font-size: 32px
+          padding-top: 32px
+          padding-bottom: 32px
 
         div.right
           @include span-columns(2 of 20, collapse)
@@ -49,9 +51,9 @@ article#welcome
         h1
           @include span-columns(10 of 30, collapse)
           text-align: center
-          font-size: 44px
-          padding-top: 30px
-          padding-bottom: 22px
+          font-size: 32px
+          padding-top: 44px
+          padding-bottom: 32px
 
         div.right
           @include span-columns(3 of 30, collapse)
@@ -63,7 +65,7 @@ article#welcome
         
       p
         text-align: center
-        font-size: 20px
+        font-size: 16px
         font-weight: 100
         color: #434242
         &:last-of-type
@@ -73,7 +75,7 @@ article#welcome
         @include span-columns(6)
         div
           @include row(table)
-          font-size: 20px
+          font-size: 16px
           padding: 10px
           color: #434242
           figure
