@@ -4,7 +4,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    = display_meta_tags site: 'Клеопатра банкет-холл', reverse: true, separator: 'on'
+    = display_meta_tags site: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра', reverse: true, separator: 'on'
     %meta{name: 'yandex-verification', content: '6b3000b602aee379'}
 
     - if Rails.env.production?
@@ -53,7 +53,7 @@
         %span КОРПОРАТИВЫ
 
       %section.logo
-        = image_tag 'logo.png'
+        = image_tag 'logo.png', alt: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра'
 
       %section.address
         тел. 8
