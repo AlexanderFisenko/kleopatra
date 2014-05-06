@@ -55,18 +55,22 @@
       %section.logo
         = image_tag 'logo.png', alt: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра'
 
-      %section.address
-        тел. 8
-        %i.fa.fa-square
-        922
-        %i.fa.fa-square
-        754
-        %i.fa.fa-square
-        4440
-        %br/
-        г. Магнитогорск
-        %i.fa.fa-square
-        ул. Советская 209а
+      %section.address{itemscope: true, itemprop: 'http://schema.org/LocalBusiness'}
+        %span{itemprop: 'telephone'}
+          тел. 8
+          %i.fa.fa-square
+          922
+          %i.fa.fa-square
+          754
+          %i.fa.fa-square
+          4440
+        %div{itemprop: 'address'}
+          %br/
+          %span{itemprop: 'addressLocality'}
+            г. Магнитогорск
+          %span{itemprop: 'streetAddress'}
+            %i.fa.fa-square
+            ул. Советская 209а
 
     %section#body
       = yield
