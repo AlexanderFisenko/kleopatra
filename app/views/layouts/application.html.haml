@@ -40,7 +40,7 @@
               } else { f(); }
           })(document, window, "yandex_metrika_callbacks");
 
-  %body
+  %body{itemscope: true, itemtype: "http://schema.org/Restaurant", }
     %header#header
       %section.nav
         %h1 ВАШИ
@@ -53,7 +53,7 @@
         %span КОРПОРАТИВЫ
 
       %section.logo
-        = image_tag 'logo.png', alt: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра'
+        = image_tag 'logo.png', alt: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра', itemprop: 'image'
 
       %section.address{itemscope: true, itemprop: 'http://schema.org/LocalBusiness'}
         %span{itemprop: 'telephone'}
