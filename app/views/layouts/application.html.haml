@@ -40,7 +40,7 @@
               } else { f(); }
           })(document, window, "yandex_metrika_callbacks");
 
-  %body{itemscope: true, itemtype: "http://schema.org/Restaurant", }
+  %body{itemscope: true, itemtype: "http://schema.org/Restaurant" }
     %header#header
       %section.nav
         %h1 ВАШИ
@@ -55,7 +55,7 @@
       %section.logo
         = image_tag 'logo.png', alt: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра', itemprop: 'image'
 
-      %section.address{itemscope: true, itemprop: 'http://schema.org/LocalBusiness'}
+      %section.address{itemscope: true, itemtype: 'http://schema.org/PostalAddress', itemprop: 'address'}
         %span{itemprop: 'telephone'}
           тел. 8
           %i.fa.fa-square
@@ -64,7 +64,7 @@
           754
           %i.fa.fa-square
           4440
-        %div{itemprop: 'address'}
+        %div
           %span{itemprop: 'addressLocality'}
             г. Магнитогорск
           %span{itemprop: 'streetAddress'}
