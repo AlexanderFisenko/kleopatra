@@ -15,15 +15,15 @@
 %article#welcome
   %section.slider
     %ul.bxslider
-      %li= image_tag '1.png'
-      %li= image_tag '2.png'
-      %li= image_tag '3.png'
-      %li= image_tag '4.png'
-      %li= image_tag '5.png'
-      %li= image_tag '6.png'
-      %li= image_tag '7.png'
-      %li= image_tag '8.png'
-      
+      %li= image_tag '1.png', alt: 'Банкетный зал в банкет-холле Клеопатра'
+      %li= image_tag '2.png', alt: 'Юбилей в банкет-холле Клеопатра'
+      %li= image_tag '3.png', alt: 'Выпускной в банкет-холле Клеопатра'
+      %li= image_tag '4.png', alt: 'Свадьба в банкет-холле Клеопатра'
+      %li= image_tag '5.png', alt: 'Корпоратив в банкет-холле Клеопатра'
+      %li= image_tag '6.png', alt: 'Банкетный зал в банкет-холле Клеопатра'
+      %li= image_tag '7.png', alt: 'Выездная регистрация в банкет-холле Клеопатра'
+      %li= image_tag '8.png', alt: 'Выездная регистрация в банкет-холле Клеопатра'
+
   %section.info
     %section.wrapper
       %div.about
@@ -33,7 +33,9 @@
         %div.right
         %div.special
       %p
-        Банкет холл «Клеопатра» - это современное место для проведения праздничных мероприятий на высшем уровне.
+        %span{itemprop: 'name'}
+          Банкет холл «Клеопатра»
+        \- это современное место для проведения праздничных мероприятий на высшем уровне.
       %p
         Светлый интерьер нашего зала, выполненный в египетском стиле, подходит как для пышных свадеб, семейных юбилеев, корпоративов и выпускных, так и для деловых презентаций и ярких детских праздников.
       %p
@@ -49,29 +51,39 @@
           НАШИ ПРЕИМУЩЕСТВА
         %div.right
         %div.special
-      %section#advantages1
-        %div
-          %figure= image_tag 'circle.png'
-          %span Наш основной зал вмещает до 100 гостей
-        %div
-          %figure= image_tag 'circle.png'
-          %span Самый светлый и уютный зал в городе
-        %div
-          %figure= image_tag 'circle.png'
-          %span Все алкогольные напитки Вы можете принести с собой без дополнительных оплат
-        %div
-          %figure= image_tag 'circle.png'
-          %span По-домашнему вкусная кухня, все Ваши гости останутся сытыми и довольными
-      %section#advantages2
-        %div
-          %figure= image_tag 'circle.png'
-          %span Зал имеет неограниченные возможности для декорирования
-        %div
-          %figure= image_tag 'circle.png'
-          %span В Вашем распоряжении фуршетный зал для гостей
-        %div
-          %figure= image_tag 'circle.png'
-          %span У нас есть отдельный зал для проведения Вашей выездной регистрации
-        %div
-          %figure= image_tag 'circle.png'
-          %span Время работы зала всегда можно продлить хоть до утра
+      %section.a
+        %section#advantages1
+          %div
+            %figure= image_tag 'circle.png'
+            %span Наш основной зал вмещает до 100 гостей
+          %div
+            %figure= image_tag 'circle.png'
+            %span Самый светлый и уютный зал в городе
+          %div
+            %figure= image_tag 'circle.png'
+            %span Все алкогольные напитки Вы можете принести с собой без дополнительных оплат
+          %div
+            %figure= image_tag 'circle.png'
+            %span{itemprop: 'servesCuisine'} По-домашнему вкусная кухня, все Ваши гости останутся сытыми и довольными
+        %section#advantages2
+          %div
+            %figure= image_tag 'circle.png'
+            %span Зал имеет неограниченные возможности для декорирования
+          %div
+            %figure= image_tag 'circle.png'
+            %span В Вашем распоряжении фуршетный зал для гостей
+          %div
+            %figure= image_tag 'circle.png'
+            %span У нас есть отдельный зал для проведения Вашей выездной регистрации
+          %div
+            %figure= image_tag 'circle.png'
+            %span Время работы зала всегда можно продлить хоть до утра
+
+      %section.call-to-action
+        %h1
+          8
+          922
+          754
+          4440
+        %h2
+          Позвоните нам

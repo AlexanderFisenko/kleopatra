@@ -25,7 +25,11 @@ default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
-
+task :lf do
+  find_servers_for_task(current_task).each do |current_server|
+    exec "ssh #{user}@#{current_server.host} -t 'cd #{current_path}; tail -f log/production.log'"
+  end
+end
 namespace :deploy do
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
