@@ -18,18 +18,21 @@ article#welcome
         border-top: 1px solid #eaeaea
         margin-top: 30px
         text-align: center
-        h1
+        section.dates
+          @include row
+          @include span-columns(12)
           font-size: 64px
           height: 64px
           color: $secondary_color
           font-weight: bold
           font-family: $avant_font
+          margin-bottom: 70px
+          section.left, section.center, section.right
+            @include span-columns(4 of 12)
+            display: inline
+            text-align: center
 
-          i
-            font-size: 32px
-            color: $secondary_color
-            vertical-align: middle
-        h2
+        section.description
           font-size: 32px
           margin-top: 40px
           font-family: $avant_font
