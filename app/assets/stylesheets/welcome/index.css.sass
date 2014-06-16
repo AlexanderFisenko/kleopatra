@@ -10,29 +10,28 @@ article#welcome
     @include outer-container
 
     section.wrapper
-      @include row
 
       section.call-to-action
-        @include span-columns(12)
+        @include row
         padding-top: 30px
         border-top: 1px solid #eaeaea
         margin-top: 30px
         text-align: center
         section.dates
-          @include row
-          @include span-columns(12)
+          @include span-columns(12 of 12)
+          padding-top: 60px
           font-size: 64px
           height: 64px
           color: $secondary_color
           font-weight: bold
           font-family: $avant_font
-          margin-bottom: 70px
-          section.left, section.center, section.right
-            @include span-columns(4 of 12)
-            display: inline
+          margin-bottom: 120px
+          section.date
+            @include span-columns(6 of 12)
             text-align: center
 
         section.description
+          margin-top: 40px
           font-size: 32px
           margin-top: 40px
           font-family: $avant_font
