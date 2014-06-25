@@ -42,37 +42,127 @@
 
   %body{itemscope: true, itemtype: "http://schema.org/Restaurant" }
     %header#header
-      %section.nav
-        %h1 ВАШИ
-        %span СВАДЬБЫ
-        %i.fa.fa-square
-        %span ЮБИЛЕИ
-        %i.fa.fa-square
-        %span ВЫПУСКНЫЕ
-        %i.fa.fa-square
-        %span КОРПОРАТИВЫ
+      %section.shell
+        %section.description
+          %h1 ВАШИ
+          %span СВАДЬБЫ
+          %i.fa.fa-square
+          %span ЮБИЛЕИ
+          %i.fa.fa-square
+          %span ВЫПУСКНЫЕ
+          %i.fa.fa-square
+          %span КОРПОРАТИВЫ
 
-      %section.logo
-        = image_tag 'logo.png', alt: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра', itemprop: 'image'
+        %section.logo
+          = image_tag 'logo.png', alt: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра', itemprop: 'image'
 
-      %section.address{itemscope: true, itemtype: 'http://schema.org/PostalAddress', itemprop: 'address'}
-        %span{itemprop: 'telephone'}
-          тел. 8
-          %i.fa.fa-square
-          922
-          %i.fa.fa-square
-          754
-          %i.fa.fa-square
-          4440
-        %div
-          %span{itemprop: 'addressLocality'}
-            г. Магнитогорск
-          %span{itemprop: 'streetAddress'}
+        %section.address{itemscope: true, itemtype: 'http://schema.org/PostalAddress', itemprop: 'address'}
+          %span{itemprop: 'telephone'}
+            тел. 8
             %i.fa.fa-square
-            ул. Советская 209а
+            922
+            %i.fa.fa-square
+            754
+            %i.fa.fa-square
+            4440
+          %div
+            %span{itemprop: 'addressLocality'}
+              г. Магнитогорск
+            %span{itemprop: 'streetAddress'}
+              %i.fa.fa-square
+              ул. Советская 209а
+
+      %section.nav
+        %section.primary-nav
+          %section#element
+            ГЛАВНАЯ
+          %section#element
+            ЗАЛЫ
+          %section#wide-element
+            НАШИ УСЛУГИ
+          %section#wide-element
+            НАШИ РЕКОМЕНДАЦИИ
+          %section#element
+            ГАЛЕРЕЯ
+          %section#element
+            ОТЗЫВЫ
+          %section#element
+            КОНТАКТЫ
+
+        %section.secondary-nav
+          %section#unit
+            о нас
+          %section#unit
+            наши преимущества
+          %section#unit
+            свадьбы
+          %section#unit
+            юбилеи
+          %section#unit
+            корпоративные мероприятия
+          %section#unit
+
 
     %section#body
       = yield
 
     %section#footer
+      %section.first-part
+        %section.row
+          %h1
+            ГЛАВНАЯ
+          о нас
+          %br/
+          наши преимущества
+          %br/
+          свадьбы
+          %br/
+          юбилеи
+          %br/
+          корпоративные мероприятия
+          %br/
+          выпускные вечера
+
+        %section.row
+          %h1
+            ЗАЛЫ
+          египетский зал
+          %br/
+          зеркальный зал
+
+        %section.row
+          %h1
+            НАШИ УСЛУГИ
+          сервировка
+          %br/
+          дополнительные услуги
+          %br/
+          аренда зала
+          %br/
+          заказ банкета
+
+        %section.row
+          %h1
+            НАШИ РЕКОМЕНДАЦИИ
+          ведущие
+          %br/
+          фотографы
+          %br/
+          оформители
+          %br/
+          кондитеры
+
+      %section.second-part
+        %section.row
+          %h1
+            ГАЛЕРЕЯ
+
+        %section.row
+          %h1
+            ОТЗЫВЫ
+
+        %section.row
+          %h1
+            КОНТАКТЫ
+
 
