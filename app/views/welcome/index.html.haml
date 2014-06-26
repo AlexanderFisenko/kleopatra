@@ -1,18 +1,18 @@
-:javascript
-  $(document).ready(function(){
-    $('.bxslider').bxSlider({
-      auto: true,
-      speed: 1000,
-      mode: 'fade',
-      captions: true,
-      adaptiveHeight: true,
-      prevText: '<i class="fa fa-chevron-circle-left"></i>',
-      nextText: '<i class="fa fa-chevron-circle-right"></i>',
+- content_for :image do
+  :javascript
+    $(document).ready(function(){
+      $('.bxslider').bxSlider({
+        auto: true,
+        speed: 1000,
+        mode: 'fade',
+        captions: true,
+        adaptiveHeight: true,
+        prevText: '<i class="fa fa-chevron-circle-left"></i>',
+        nextText: '<i class="fa fa-chevron-circle-right"></i>',
 
-    })
-  });
+      })
+    });
 
-%article#welcome
   %section.slider
     %ul.bxslider
       %li= image_tag '1.png', alt: 'Банкетный зал в банкет-холле Клеопатра'
@@ -24,6 +24,7 @@
       %li= image_tag '7.png', alt: 'Выездная регистрация в банкет-холле Клеопатра'
       %li= image_tag '8.png', alt: 'Выездная регистрация в банкет-холле Клеопатра'
 
+%article#welcome
   %section.info
     %section.wrapper
       %div.about

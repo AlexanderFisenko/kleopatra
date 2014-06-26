@@ -74,37 +74,40 @@
 
       %section.nav
         %section.primary-nav
-          %section#element
+          %section.element
             ГЛАВНАЯ
-          %section#element
+          %section.element
             ЗАЛЫ
-          %section#wide-element
+          %section.element
             НАШИ УСЛУГИ
-          %section#wide-element
+          %section.element
             НАШИ РЕКОМЕНДАЦИИ
-          %section#element
+          %section.element
             ГАЛЕРЕЯ
-          %section#element
+          %section.element
             ОТЗЫВЫ
-          %section#element
+          %section.element
             КОНТАКТЫ
 
         %section.secondary-nav
-          %section#unit
+          %section.unit
             = link_to 'о нас', root_path
-          %section#unit
+          %section.unit
             = link_to 'наши преимущества', friendly_advantages_path
-          %section#unit
+          %section.unit
             = link_to 'свадьбы', friendly_wedding_path
-          %section#unit
+          %section.unit
             = link_to 'юбилеи', friendly_anniversary_path
-          %section#unit
+          %section.unit
             = link_to 'корпоративные мероприятия', friendly_corporate_path
-          %section#unit
+          %section.unit
             = link_to 'выпускные вечера', friendly_prom_path
 
-    %section#figure
-      = image_tag 'slider_substitude.jpg'
+    %section.picture
+      - if content_for?(:image)
+        = content_for :image
+      - else
+        = image_tag 'slider_substitude.jpg'
 
     %section#body
       = yield
@@ -167,3 +170,5 @@
         %section.row
           %h1
             КОНТАКТЫ
+
+

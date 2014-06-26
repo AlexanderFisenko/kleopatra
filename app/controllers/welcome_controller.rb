@@ -1,6 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    render layout: 'application_mainpage'
   end
 
   def advantages
