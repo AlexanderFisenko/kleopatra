@@ -22,8 +22,13 @@
 $mobile: new-breakpoint(min-width 320px max-width 960px 12);
 $desktop: new-breakpoint(min-width 960px 12);
 
- @import 'layout';
+ @import 'layouts/layout';
 
  @import 'typography';
 
  @import 'welcome/index';
+ @import 'welcome/advantages';
+ @import 'welcome/prom';
+ @import 'welcome/corporate';
+ @import 'welcome/wedding';
+ @import 'welcome/anniversary';
