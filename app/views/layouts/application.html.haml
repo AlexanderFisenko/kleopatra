@@ -91,17 +91,17 @@
 
         %section.secondary-nav
           %section.unit
-            = link_to 'о нас', root_path
+            = link_to_unless_current 'о нас', root_path
           %section.unit
-            = link_to 'наши преимущества', friendly_advantages_path
+            = link_to_unless_current 'наши преимущества', friendly_advantages_path
           %section.unit
-            = link_to 'свадьбы', friendly_wedding_path
+            = link_to_unless_current 'свадьбы', friendly_wedding_path
           %section.unit
-            = link_to 'юбилеи', friendly_anniversary_path
+            = link_to_unless_current 'юбилеи', friendly_anniversary_path
           %section.unit
-            = link_to 'корпоративные мероприятия', friendly_corporate_path
+            = link_to_unless_current 'корпоративные мероприятия', friendly_corporate_path
           %section.unit
-            = link_to 'выпускные вечера', friendly_prom_path
+            = link_to_unless_current 'выпускные вечера', friendly_prom_path
 
     %section.picture
       - if content_for?(:image)
@@ -113,62 +113,58 @@
       = yield
 
     %section#footer
-      %section.first-part
-        %section.row
-          %h1
-            ГЛАВНАЯ
-          о нас
-          %br/
-          наши преимущества
-          %br/
-          свадьбы
-          %br/
-          юбилеи
-          %br/
-          корпоративные мероприятия
-          %br/
-          выпускные вечера
+      %section.row
+        %h1
+          ГЛАВНАЯ
+        о нас
+        %br/
+        наши преимущества
+        %br/
+        свадьбы
+        %br/
+        юбилеи
+        %br/
+        корпоративные мероприятия
+        %br/
+        выпускные вечера
 
-        %section.row
-          %h1
-            ЗАЛЫ
-          египетский зал
-          %br/
-          зеркальный зал
+      %section.row
+        %h1
+          ЗАЛЫ
+        египетский зал
+        %br/
+        зеркальный зал
 
-        %section.row
-          %h1
-            НАШИ УСЛУГИ
-          сервировка
-          %br/
-          дополнительные услуги
-          %br/
-          аренда зала
-          %br/
-          заказ банкета
+      %section.row
+        %h1
+          НАШИ УСЛУГИ
+        сервировка
+        %br/
+        дополнительные услуги
+        %br/
+        аренда зала
+        %br/
+        заказ банкета
 
-        %section.row
-          %h1
-            НАШИ РЕКОМЕНДАЦИИ
-          ведущие
-          %br/
-          фотографы
-          %br/
-          оформители
-          %br/
-          кондитеры
+      %section.row
+        %h1
+          НАШИ РЕКОМЕНДАЦИИ
+        ведущие
+        %br/
+        фотографы
+        %br/
+        оформители
+        %br/
+        кондитеры
 
-      %section.second-part
-        %section.row
-          %h1
-            ГАЛЕРЕЯ
+      %section.row
+        %h1
+          ГАЛЕРЕЯ
 
-        %section.row
-          %h1
-            ОТЗЫВЫ
+      %section.row
+        %h1
+          ОТЗЫВЫ
 
-        %section.row
-          %h1
-            КОНТАКТЫ
-
-
+      %section.row
+        %h1
+          КОНТАКТЫ
