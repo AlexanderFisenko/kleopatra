@@ -103,7 +103,7 @@
           %section.unit
             = link_to_unless_current 'выпускные вечера', friendly_prom_path
 
-    %section.picture
+    %section#figure
       - if content_for?(:image)
         = content_for :image
       - else
