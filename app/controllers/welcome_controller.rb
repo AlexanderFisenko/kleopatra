@@ -16,4 +16,10 @@ class WelcomeController < ApplicationController
 
   def prom
   end
+
+  def egyptian_hall
+  end
+
+  def mirror_hall
+  end
 end

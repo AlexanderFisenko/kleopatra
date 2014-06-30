@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'corporate' => 'welcome#corporate', as: :friendly_corporate
   get 'advantages' => 'welcome#advantages', as: :friendly_advantages
   get 'prom' => 'welcome#prom', as: :friendly_prom
+  get 'halls' => 'welcome#hall', as: :friendly_hall
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

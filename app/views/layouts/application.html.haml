@@ -75,9 +75,9 @@
       %section.nav
         %section.primary-nav
           %section.element
-            ГЛАВНАЯ
+            = active_link_to "ГЛАВНАЯ", root_path
           %section.element
-            ЗАЛЫ
+            = link_to_unless_current 'ЗАЛЫ', friendly_hall_path
           %section.element
             НАШИ УСЛУГИ
           %section.element
