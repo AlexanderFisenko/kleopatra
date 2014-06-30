@@ -19,7 +19,7 @@
 
 
 $(document).ready(function(){
-  $("#main").on("click", function(){
+  $("ww#main").on("click", function(){
     $("#test").show();
   });
 });
