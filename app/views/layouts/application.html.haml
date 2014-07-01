@@ -7,6 +7,9 @@
     = display_meta_tags site: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра', reverse: true, separator: 'on'
     %meta{name: 'yandex-verification', content: '6b3000b602aee379'}
     %meta{name: 'google-site-verification', content: 'GCZrZYqSRdvsJF5rnKhu8GauHneIL0gOYtRZvJixLSc'}
+
+
+
     - if Rails.env.production?
       - content_for :javascript do
         :javascript
@@ -75,7 +78,7 @@
       %section.nav
         %section.primary-nav
           %section.element
-            = active_link_to "ГЛАВНАЯ", root_path
+            = link_to "ГЛАВНАЯ", "#", id: 'main'
           %section.element
             = link_to 'ЗАЛЫ'
           %section.element
@@ -90,6 +93,8 @@
             КОНТАКТЫ
 
         %section.secondary-nav
+          %section#test
+            dsffds
           %section.unit
             = link_to_unless_current 'о нас', root_path
           %section.unit

@@ -15,3 +15,11 @@
 //= require turbolinks
 //= require_tree
 //= require jquery.bxslider.min
+
+
+
+$(document).ready(function(){
+  $("ww#main").on("click", function(){
+    $("#test").show();
+  });
+});
