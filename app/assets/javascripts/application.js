@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree
 //= require jquery.bxslider.min
+//= require jquery-1.4.3.min
 
 
 

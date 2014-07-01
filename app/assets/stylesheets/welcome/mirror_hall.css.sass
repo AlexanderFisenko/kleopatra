@@ -1,0 +1,36 @@
+article#mirror_hall
+  @include outer-container
+  @include row
+  section.description
+    @include span-columns(3 of 12)
+    margin-top: 60px
+    font-size: 16px
+
+    &:last-child
+      @include span-columns(6 of 12)
+    h1
+      font-family: $main_font
+      font-size: 17px
+      font-weight: 700
+      padding: 0px
+      text-align: left
+    h1.capacity
+      margin-top: 36px
+    p
+      text-align: left
+      font-size: 16px
+    img
+      width: 290px
+      &#example1
+        padding-right: 10px
+        padding-bottom: 10px
+      &#example2
+        padding-left: 10px
+        padding-bottom: 10px
+      &#example3
+        padding-right: 10px
+        padding-top: 10px
+      &#example4
+        padding-left: 10px
+        padding-top: 10px
+

@@ -1,0 +1,31 @@
+article#egyptian_hall
+  @include outer-container
+  @include row
+  section.description
+    @include span-columns(3 of 12)
+    margin-top: 60px
+    font-size: 16px
+
+    &:last-child
+      @include span-columns(6 of 12)
+      h1
+        padding-bottom: 26px
+      p
+        padding-bottom: 10px
+    h1
+      font-family: $main_font
+      font-size: 17px
+      font-weight: 700
+      padding: 0px
+      text-align: left
+
+    h1.capacity
+      margin-top: 36px
+
+    p
+      text-align: left
+      font-size: 16px
+
+    img
+      width: 113px
+      padding: 5px

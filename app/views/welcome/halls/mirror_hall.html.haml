@@ -1,6 +1,20 @@
 - content_for :image do
   = image_tag 'mirror_hall.png'
 
+- content_for :javascript do
+  :javascript
+    $(document).ready(function() {
+      $("a#example2").fancybox({
+        'overlayShow' : false,
+        'transitionIn'  : 'elastic',
+        'transitionOut' : 'elastic'
+      });;
+    });
+
+
+
+
+
 %article#mirror_hall
   %h1
     ЗЕРКАЛЬНЫЙ ЗАЛ
@@ -14,3 +28,29 @@
     Это место как будто создано для проведения вашей незабываемой выездной регистрации.
   %p
     Во время нее здесь царит атмосфера любви и романтики.
+
+  %section.description
+    %h1
+      ПЛОЩАДЬ:
+    %p
+      50 кв.м.
+    %h1.capacity
+      ВМЕСТИМОСТЬ:
+    %p
+      выездная регистрация до 100 гостей
+
+  %section.description
+    %h1
+      ПОДХОДИТ ДЛЯ ПРОВЕДЕНИЯ:
+    %p
+      выездной регистрации;
+    %p
+      отдельного танцпола;
+    %p
+      зоны отдыха гостей
+
+  %section.description
+    = image_tag 'mirror_hall/1m.png', id: 'example1'
+    = image_tag 'mirror_hall/2m.png', id: 'example2'
+    = image_tag 'mirror_hall/3m.png', id: 'example3'
+    = image_tag 'mirror_hall/4m.png', id: 'example4'
