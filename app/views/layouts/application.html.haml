@@ -78,9 +78,9 @@
       %section.nav
         %section.primary-nav
           %section.element
-            = link_to "ГЛАВНАЯ", root_path, id: 'main'
+            = link_to_unless_current "ГЛАВНАЯ", root_path
           %section.element
-            = link_to 'ЗАЛЫ'
+            = link_to_unless_current 'ЗАЛЫ'
           %section.element
             НАШИ УСЛУГИ
           %section.element
@@ -92,9 +92,7 @@
           %section.element
             КОНТАКТЫ
 
-        %section.secondary-nav
-          %section#test
-            dsffds
+        %section{class: 'secondary-nav', id: 'main'}
           %section.unit
             = link_to_unless_current 'о нас', root_path
           %section.unit
@@ -107,6 +105,12 @@
             = link_to_unless_current 'корпоративные мероприятия', friendly_corporate_path
           %section.unit
             = link_to_unless_current 'выпускные вечера', friendly_prom_path
+
+        %section{class: 'secondary-nav', id: 'halls'}
+          %section.unit
+            = link_to_unless_current 'о нас', root_path
+          %section.unit
+            = link_to_unless_current 'наши преимущества', friendly_advantages_path
 
     %section#figure
       - if content_for?(:image)
@@ -175,3 +179,4 @@
           %h1
             КОНТАКТЫ
 
+    = content_for(:javascript)
