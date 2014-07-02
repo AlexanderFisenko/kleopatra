@@ -13,9 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree
 //= require jquery.bxslider.min
-
+//= require jquery.fancybox.pack
+//= require_tree
 
 
 $(document).ready(function(){
@@ -25,8 +25,12 @@ $(document).ready(function(){
   });
 
   $("#main-link").on("click", function(){
-  	$("#halls").hide();
-	$("#main").show();
+    $("#halls").hide();
+    $("#main").show();
+  });
+
+  $('.fancybox').fancybox({
+    openEffect  : 'elastic'
   });
 
 });
