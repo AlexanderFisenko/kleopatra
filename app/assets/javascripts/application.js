@@ -19,7 +19,7 @@
 
 
 $(document).ready(function(){
-  $("#halls-link").on("click", function(){
+/*  $("#halls-link").on("click", function(){
     $("#halls").show();
     $("#main").hide();
   });
@@ -27,8 +27,9 @@ $(document).ready(function(){
   $("#main-link").on("click", function(){
     $("#halls").hide();
     $("#main").show();
-  });
+  });*/
 
+/*  alert('1')*/
   $('.fancybox').fancybox({
     openEffect  : 'elastic'
   });

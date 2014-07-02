@@ -1,6 +1,13 @@
 - content_for :image do
   = image_tag 'egyptian_hall.png'
 
+- content_for :secondary_navigation do
+  %section{class: 'secondary-nav', id: 'halls'}
+    %section.unit
+      = link_to_unless_current 'египетский зал', friendly_egyptian_hall_path
+    %section.unit
+      = link_to_unless_current 'зеркальный зал', friendly_mirror_hall_path
+
 %article#egyptian_hall
   %h1
     ЕГИПЕТСКИЙ ЗАЛ

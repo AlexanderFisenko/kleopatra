@@ -78,9 +78,9 @@
       %section.nav
         %section.primary-nav
           %section.element
-            = link_to "ГЛАВНАЯ", root_path, id: 'main-link'
+            = link_to_unless_current "ГЛАВНАЯ", root_path
           %section.element
-            %p#halls-link ЗАЛЫ
+            = link_to_unless_current "ЗАЛЫ", friendly_egyptian_hall_path
           %section.element
             %p НАШИ УСЛУГИ
           %section.element
@@ -92,25 +92,15 @@
           %section.element
             %p КОНТАКТЫ
 
-        %section{class: 'secondary-nav', id: 'main'}
-          %section.unit
-            = link_to_unless_current 'о нас', root_path
-          %section.unit
-            = link_to_unless_current 'наши преимущества', friendly_advantages_path
-          %section.unit
-            = link_to_unless_current 'свадьбы', friendly_wedding_path
-          %section.unit
-            = link_to_unless_current 'юбилеи', friendly_anniversary_path
-          %section.unit
-            = link_to_unless_current 'корпоративные мероприятия', friendly_corporate_path
-          %section.unit
-            = link_to_unless_current 'выпускные вечера', friendly_prom_path
+        = content_for(:secondary_navigation)
 
-        %section{class: 'secondary-nav', id: 'halls'}
-          %section.unit
-            = link_to_unless_current 'египетский зал', friendly_egyptian_hall_path
-          %section.unit
-            = link_to_unless_current 'зеркальный зал', friendly_mirror_hall_path
+        
+
+        / %section{class: 'secondary-nav', id: 'halls'}
+        /   %section.unit
+        /     = link_to_unless_current 'египетский зал', friendly_egyptian_hall_path
+        /   %section.unit
+        /     = link_to_unless_current 'зеркальный зал', friendly_mirror_hall_path
 
     %section#figure
       - if content_for?(:image)

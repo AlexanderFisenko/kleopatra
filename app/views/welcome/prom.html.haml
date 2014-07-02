@@ -1,6 +1,21 @@
 - content_for :image do
   = image_tag 'prom.png'
 
+- content_for :secondary_navigation do
+  %section{class: 'secondary-nav', id: 'main'}
+    %section.unit
+      = link_to_unless_current 'о нас', root_path
+    %section.unit
+      = link_to_unless_current 'наши преимущества', friendly_advantages_path
+    %section.unit
+      = link_to_unless_current 'свадьбы', friendly_wedding_path
+    %section.unit
+      = link_to_unless_current 'юбилеи', friendly_anniversary_path
+    %section.unit
+      = link_to_unless_current 'корпоративные мероприятия', friendly_corporate_path
+    %section.unit
+      = link_to_unless_current 'выпускные вечера', friendly_prom_path
+
 %article#prom
   %h1
     ВЫПУСКНЫЕ ВЕЧЕРА
