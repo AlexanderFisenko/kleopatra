@@ -115,25 +115,25 @@
       %section.help
         %section.row
           %h1
-            ГЛАВНАЯ
-          о нас
+            = link_to "ГЛАВНАЯ", root_path
+          = link_to "о нас", root_path
           %br/
-          наши преимущества
+          = link_to "наши преимущеста", friendly_advantages_path
           %br/
-          свадьбы
+          = link_to "свадьбы", friendly_wedding_path
           %br/
-          юбилеи
+          = link_to "юбилеи", friendly_anniversary_path
           %br/
-          корпоративные мероприятия
+          = link_to "корпоративные мероприятия", friendly_corporate_path
           %br/
-          выпускные вечера
+          = link_to "выпускные вечера", friendly_prom_path
 
         %section.row
           %h1
-            ЗАЛЫ
-          египетский зал
+            = link_to "ЗАЛЫ", friendly_egyptian_hall_path
+          = link_to "египетский зал", friendly_egyptian_hall_path
           %br/
-          зеркальный зал
+          = link_to "зеркальный зал", friendly_mirror_hall_path
 
         %section.row
           %h1
