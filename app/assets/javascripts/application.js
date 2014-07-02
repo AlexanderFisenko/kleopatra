@@ -15,12 +15,18 @@
 //= require turbolinks
 //= require_tree
 //= require jquery.bxslider.min
-//= require jquery-1.4.3.min
 
 
 
-// $(document).ready(function(){
-//   $("#main").on("click", function(){
-//     $("#test").show();
-//   });
-// });
+$(document).ready(function(){
+  $("#halls-link").on("click", function(){
+    $("#halls").show();
+    $("#main").hide();
+  });
+
+  $("#main-link").on("click", function(){
+  	$("#halls").hide();
+	$("#main").show();
+  });
+
+});

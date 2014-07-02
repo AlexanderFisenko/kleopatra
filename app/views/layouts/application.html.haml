@@ -78,19 +78,19 @@
       %section.nav
         %section.primary-nav
           %section.element
-            = link_to_unless_current "ГЛАВНАЯ", root_path
+            = link_to "ГЛАВНАЯ", root_path, id: 'main-link'
           %section.element
-            = link_to_unless_current 'ЗАЛЫ'
+            %p#halls-link ЗАЛЫ
           %section.element
-            НАШИ УСЛУГИ
+            %p НАШИ УСЛУГИ
           %section.element
-            НАШИ РЕКОМЕНДАЦИИ
+            %p НАШИ РЕКОМЕНДАЦИИ
           %section.element
-            ГАЛЕРЕЯ
+            %p ГАЛЕРЕЯ
           %section.element
-            ОТЗЫВЫ
+            %p ОТЗЫВЫ
           %section.element
-            КОНТАКТЫ
+            %p КОНТАКТЫ
 
         %section{class: 'secondary-nav', id: 'main'}
           %section.unit
@@ -108,9 +108,9 @@
 
         %section{class: 'secondary-nav', id: 'halls'}
           %section.unit
-            = link_to_unless_current 'о нас', root_path
+            = link_to_unless_current 'египетский зал', friendly_egyptian_hall_path
           %section.unit
-            = link_to_unless_current 'наши преимущества', friendly_advantages_path
+            = link_to_unless_current 'зеркальный зал', friendly_mirror_hall_path
 
     %section#figure
       - if content_for?(:image)

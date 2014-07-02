@@ -56,15 +56,20 @@ body
 
         section.element
           text-align: center
-          font-size: 14px
+
           display: inline-block
           padding: 8px 20px
+          font-weight: bold
+          a, p
+            font-weight: 200
+            text-decoration: none
+            color: #222222
+            font-size: 14px
 
-      section.secondary-nav
+      section#main, section#halls
         width: 860px
         margin: 0 auto
-        section#test
-          display: none
+
         section.unit
           display: inline-block
           padding: 8px 0
@@ -76,9 +81,16 @@ body
             margin-left: 24px
           &:last-child
             margin-right: 0px
-          a
+          a, p
             color: $secondary_color
             font-weight: 200
+
+      section#halls
+        display: none
+        text-align: center
+        section.unit
+          margin-left: 18px
+          margin-right: 18px
 
   section#figure
     img
