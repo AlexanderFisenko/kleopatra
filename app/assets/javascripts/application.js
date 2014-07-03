@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require jquery.bxslider.min
 //= require jquery.fancybox.pack
 //= require_tree
