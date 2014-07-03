@@ -77,9 +77,9 @@ body
           font-size: 17px
           color: $secondary_color
           font-weight: bold
-          &:first-child
+          &:first-of-type
             margin-left: 24px
-          &:last-child
+          &:last-of-type
             margin-right: 0px
           a, p
             color: $secondary_color
@@ -97,6 +97,7 @@ body
       height: 430px
 
   section#body
+    @include outer-container
 
   section#footer
     background-image: image-url('footer.png')

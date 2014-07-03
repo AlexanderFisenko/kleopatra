@@ -1,69 +1,40 @@
 article#welcome
   section.info
-    @include outer-container
-
-    section.wrapper
-      div.about
-        @include row
-
-        div.left
-          @include shift(7 of 20)
-          @include span-columns(2 of 20, collapse)
-          height: 1px
-          background-color: black
-          margin-top: 56px
-
-        h1
-          @include span-columns(2 of 20, collapse)
-          text-align: center
-          font-size: 32px
-          padding-top: 32px
-          padding-bottom: 32px
-
-        div.right
-          @include span-columns(2 of 20, collapse)
-          height: 1px
-          background-color: black
-          margin-top: 56px
-        div.special
-          @include span-columns(1 of 20, collapse)
-
-      p
-        text-align: center
-        font-size: 18px
-        font-weight: 100
-        color: #434242
-        &:last-of-type
-          margin-top: 30px
-
-    section.booking
-      width: 800px
-      margin: 0 auto
-      padding: 0 0 8px
-      border-top: 1px solid $secondary_color
-      border-bottom: 1px solid $secondary_color
-      margin-top: 90px
+    p
       text-align: center
-      h1
-        font-size: 32px
-        text-align: center
-        margin-bottom: 10px
+      font-size: 18px
+      font-weight: 100
+      color: #434242
+      &:last-of-type
+        margin-top: 30px
 
-      section.friday, section.saturday
-        @include row(table)
-        padding: 14px 0
-        section.figure
-          @include span-columns(3 of 9, table)
-          vertical-align: middle
-          text-align: right
-          img
-            width: 36px
+  section.booking
+    width: 800px
+    margin: 0 auto
+    padding: 0 0 8px
+    border-top: 1px solid $secondary_color
+    border-bottom: 1px solid $secondary_color
+    margin-top: 90px
+    text-align: center
+    h1
+      font-size: 32px
+      text-align: center
+      margin-bottom: 10px
 
-        section.date1, section.date2
-          @include span-columns(3 of 9, table)
-          font-size: 16px
+    section.friday, section.saturday
+      @include row(table)
+      padding: 14px 0
+      section.figure
+        @include span-columns(3 of 9, table)
+        vertical-align: middle
+        text-align: right
+        img
+          width: 36px
 
-        section.date2
+      section.date
+        @include span-columns(3 of 9, table)
+        font-size: 16px
+        &:last-of-type
           text-align: left
 
   section.call-to-action
