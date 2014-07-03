@@ -8,8 +8,6 @@
     %meta{name: 'yandex-verification', content: '6b3000b602aee379'}
     %meta{name: 'google-site-verification', content: 'GCZrZYqSRdvsJF5rnKhu8GauHneIL0gOYtRZvJixLSc'}
 
-
-
     - if Rails.env.production?
       - content_for :javascript do
         :javascript
@@ -78,9 +76,9 @@
       %section.nav
         %section.primary-nav
           %section.element
-            = link_to_unless_current "ГЛАВНАЯ", root_path
+            = active_link_to "ГЛАВНАЯ", root_path, active: [["welcome"], ["index", "advantages", "wedding", "anniversary", "corporate", "prom"]]
           %section.element
-            = link_to_unless_current "ЗАЛЫ", friendly_egyptian_hall_path
+            = active_link_to "ЗАЛЫ", friendly_egyptian_hall_path, active: [["halls"], ["egyptian_hall", "mirror_hall"]]
           %section.element
             %p НАШИ УСЛУГИ
           %section.element
@@ -93,14 +91,6 @@
             %p КОНТАКТЫ
 
         = content_for(:secondary_navigation)
-
-
-
-        / %section{class: 'secondary-nav', id: 'halls'}
-        /   %section.unit
-        /     = link_to_unless_current 'египетский зал', friendly_egyptian_hall_path
-        /   %section.unit
-        /     = link_to_unless_current 'зеркальный зал', friendly_mirror_hall_path
 
     %section#figure
       - if content_for?(:image)

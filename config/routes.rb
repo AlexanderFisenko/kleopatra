@@ -7,15 +7,17 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get 'wedding' => 'welcome#wedding', as: :friendly_wedding
-  get 'anniversary' => 'welcome#anniversary', as: :friendly_anniversary
-  get 'corporate' => 'welcome#corporate', as: :friendly_corporate
-  get 'advantages' => 'welcome#advantages', as: :friendly_advantages
-  get 'prom' => 'welcome#prom', as: :friendly_prom
+  scope '/our' do
+    get 'wedding' => 'welcome#wedding', as: :friendly_wedding
+    get 'anniversary' => 'welcome#anniversary', as: :friendly_anniversary
+    get 'corporate' => 'welcome#corporate', as: :friendly_corporate
+    get 'advantages' => 'welcome#advantages', as: :friendly_advantages
+    get 'prom' => 'welcome#prom', as: :friendly_prom
+  end
 
   scope '/halls' do
-    get 'egyptian' => 'welcome#egyptian_hall', as: :friendly_egyptian_hall
-    get 'mirror' => 'welcome#mirror_hall', as: :friendly_mirror_hall
+    get 'egyptian' => 'halls#egyptian_hall', as: :friendly_egyptian_hall
+    get 'mirror' => 'halls#mirror_hall', as: :friendly_mirror_hall
   end
 
   # Example of regular route:

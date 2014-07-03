@@ -17,11 +17,5 @@ class WelcomeController < ApplicationController
   def prom
   end
 
-  def egyptian_hall
-    render template: "welcome/halls/egyptian_hall"
-  end
-
-  def mirror_hall
-    render template: "welcome/halls/mirror_hall"
-  end
+ 
 end
