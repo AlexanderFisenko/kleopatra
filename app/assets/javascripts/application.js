@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.bxslider.min
 //= require jquery.fancybox.pack
+//= require jquery.fancybox-thumbs
 //= require_tree
 
 
@@ -29,8 +30,18 @@ $(document).ready(function(){
   });*/
 
 /*  alert('1')*/
-  $('.fancybox').fancybox({
-    openEffect  : 'elastic'
+  $('.fancybox-thumb').fancybox({
+    prevEffect  : 'none',
+    nextEffect  : 'none',
+    helpers : {
+      title : {
+        type: 'outside'
+      },
+      thumbs  : {
+        width : 50,
+        height  : 50
+      }
+    }
   });
 
 });

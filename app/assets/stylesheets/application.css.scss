@@ -19,6 +19,7 @@
 @import 'fonts';
 @import	'jquery.bxslider';
 @import	'jquery.fancybox';
+@import	'jquery.fancybox-thumbs';
 
 $mobile: new-breakpoint(min-width 320px max-width 960px 12);
 $desktop: new-breakpoint(min-width 960px 12);
