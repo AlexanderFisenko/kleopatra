@@ -76,11 +76,11 @@
       %section.nav
         %section.primary-nav
           %section.element
-            = active_link_to "ГЛАВНАЯ", root_path, active: [["welcome"], ["index", "advantages", "wedding", "anniversary", "corporate", "prom"]]
-            / = link_to "ГЛАВНАЯ", root_path
+            / = active_link_to "ГЛАВНАЯ", root_path, active: [["welcome"], ["index", "advantages", "wedding", "anniversary", "corporate", "prom"]]
+            = link_to "ГЛАВНАЯ", root_path
           %section.element
-            = active_link_to "ЗАЛЫ", friendly_egyptian_hall_path, active: [["halls"], ["egyptian_hall", "mirror_hall"]]
-            / = link_to "ЗАЛЫ", friendly_egyptian_hall_path
+            / = active_link_to "ЗАЛЫ", friendly_egyptian_hall_path, active: [["halls"], ["egyptian_hall", "mirror_hall"]]
+            = link_to "ЗАЛЫ", friendly_egyptian_hall_path
           %section.element
             %p НАШИ УСЛУГИ
           %section.element
