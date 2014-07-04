@@ -43,8 +43,6 @@ gem 'unicorn'
 gem 'execjs'
 
 gem 'therubyracer', '~> 0.10.2'
-
-gem 'active_link_to'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
