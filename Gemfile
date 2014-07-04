@@ -42,6 +42,8 @@ gem 'unicorn'
 
 gem 'active_link_to'
 
+gem 'link_to_active_state'
+
 gem 'execjs'
 
 gem 'therubyracer', '~> 0.10.2'
