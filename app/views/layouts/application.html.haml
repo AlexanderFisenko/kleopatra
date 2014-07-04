@@ -77,10 +77,8 @@
         %section.primary-nav
           %section.element
             = active_link_to "ГЛАВНАЯ", root_path, active: [["welcome"], ["index", "advantages", "wedding", "anniversary", "corporate", "prom"]]
-            / = link_to "ГЛАВНАЯ", root_path, active_on: [root_path, friendly_wedding_path, friendly_anniversary_path, friendly_corporate_path, friendly_advantages_path, friendly_prom_path]
           %section.element
             = active_link_to "ЗАЛЫ", friendly_egyptian_hall_path, active: [["halls"], ["egyptian_hall", "mirror_hall"]]
-            / = link_to "ЗАЛЫ", friendly_egyptian_hall_path, active_on: [friendly_egyptian_hall_path, friendly_mirror_hall_path]
           %section.element
             %p НАШИ УСЛУГИ
           %section.element
