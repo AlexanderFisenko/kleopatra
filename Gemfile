@@ -40,6 +40,8 @@ gem 'font-awesome-rails', '~> 4.0.3'
 gem 'capistrano', '2.13.5'
 gem 'unicorn'
 
+gem 'active_link_to'
+
 gem 'execjs'
 
 gem 'therubyracer', '~> 0.10.2'
