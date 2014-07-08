@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get 'order' => 'service#order', as: :friendly_order
 
+  get 'reservation' => 'service#reservation', as: :friendly_reservation
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
