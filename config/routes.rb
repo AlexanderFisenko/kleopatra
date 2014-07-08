@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get 'recommendations' => 'recommendations#index', as: :friendly_recommendations
 
+  get 'contacts' => 'contacts#index', as: :friendly_contacts
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

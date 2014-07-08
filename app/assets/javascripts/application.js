@@ -15,6 +15,7 @@
 //= require jquery.bxslider.min
 //= require jquery.fancybox.pack
 //= require jquery.fancybox-thumbs
+//= require contacts
 //= require_tree
 
 
