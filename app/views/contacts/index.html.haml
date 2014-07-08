@@ -1,6 +1,31 @@
+- content_for :image do
+  = image_tag "contacts.png"
 
 %article#contacts-index
   %h1.lined
     контакты
-  %section#map
-    %script{:charset => "utf-8", :src => "//api-maps.yandex.ru/services/constructor/1.0/js/?sid=pgSvarAbaCWo_QRE2Rq6h2VJ1mZPDU7L&width=600&height=450", :type => "text/javascript"}
+  %section.wrapper
+    %section#map
+      %script{:charset => "utf-8", :src => "//api-maps.yandex.ru/services/constructor/1.0/js/?sid=CfOxJOxBoRLap36ar2TmLCzAM6VXm8mu&width=600&height=450", :type => "text/javascript"}
+  %section.contacts
+    %div.element
+      %h1
+        банкет-холл клеопатра
+    %div.element
+      %h1
+        адрес:
+      %p
+        455034 г Магнитогорск
+      %p
+        ул. Советская д. 209а
+    %div.element
+      %h1
+        телефон:
+      %p
+        8-922-754-4440
+    %div.element
+      %h1
+        e-mail:
+      %p
+        banketvkleopatre@gmail.com
+
