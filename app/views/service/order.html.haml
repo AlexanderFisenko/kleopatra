@@ -1,0 +1,32 @@
+- content_for :image do
+  = image_tag 'service/order.png'
+
+- content_for :secondary_navigation do
+  = render "secondary_nav"
+
+%article#order
+  %h1.lined
+    заказ банкета
+  %p
+    Несколько простых шагов по организации праздничного мероприятия в Банкет холл Клеопатра:
+  %section.algorithm
+    %section.row
+      %section.figure
+        = image_tag "service/1.png"
+      %p звоните нам
+    %section.row
+      %section.figure
+        = image_tag "service/2.png"
+      %p приезжайте на индивидуальную экскурсию по заведению
+    %section.row
+      %section.figure
+        = image_tag "service/3.png"
+      %p бронируйте свободную дату
+    %section.row
+      %section.figure
+        = image_tag "service/4.png"
+      %p встречайтесь с шеф-поваром для обсуждения банкетного меню
+    %section.row
+      %section.figure
+        = image_tag "service/5.png"
+      %p все готово к назначенной дате

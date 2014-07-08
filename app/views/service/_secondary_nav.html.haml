@@ -1,0 +1,11 @@
+%section{class: 'secondary-nav', id: 'service'}
+  %section.unit
+    = link_to_unless_current 'заказ банкета', friendly_order_path
+  %section.unit
+    = link_to_unless_current 'бронирование даты', "#"
+  %section.unit
+    = link_to_unless_current 'сервировка', "#"
+  %section.unit
+    = link_to_unless_current 'обслуживание', "#"
+  %section.unit
+    = link_to_unless_current 'дополнительные услуги', "#"

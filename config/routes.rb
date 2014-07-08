@@ -26,6 +26,8 @@ Rails.application.routes.draw do
 
   get 'contacts' => 'contacts#index', as: :friendly_contacts
 
+  get 'order' => 'service#order', as: :friendly_order
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
