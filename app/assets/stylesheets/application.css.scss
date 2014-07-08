@@ -34,6 +34,10 @@ $desktop: new-breakpoint(min-width 960px 12);
  @import 'welcome/corporate';
  @import 'welcome/wedding';
  @import 'welcome/anniversary';
- 
+
  @import 'halls/egyptian_hall';
  @import 'halls/mirror_hall';
+
+ @import 'recommendations/index';
+
+ @import 'feedback/index';

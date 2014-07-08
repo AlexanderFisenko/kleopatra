@@ -20,6 +20,10 @@ Rails.application.routes.draw do
     get 'mirror' => 'halls#mirror_hall', as: :friendly_mirror_hall
   end
 
+  get 'feedback' => 'feedback#index', as: :friendly_feedback
+
+  get 'recommendations' => 'recommendations#index', as: :friendly_recommendations
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

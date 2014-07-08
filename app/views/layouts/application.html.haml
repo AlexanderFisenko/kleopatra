@@ -86,11 +86,14 @@
           %section.element
             %p ГАЛЕРЕЯ
           %section.element
-            %p ОТЗЫВЫ
+            = active_link_to "ОТЗЫВЫ", friendly_feedback_path, active: [["feedback"], ["index"]]
           %section.element
             %p КОНТАКТЫ
 
-        = content_for(:secondary_navigation)
+        - if content_for?(:secondary_navigation)
+          = content_for :secondary_navigation
+        - else
+          %section.secondary-nav-substitude
 
     %section#figure
       - if content_for?(:image)
