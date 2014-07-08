@@ -88,7 +88,7 @@
           %section.element
             = active_link_to "ОТЗЫВЫ", friendly_feedback_path, active: [["feedback"], ["index"]]
           %section.element
-            %p КОНТАКТЫ
+            = active_link_to "КОНТАКТЫ", friendly_contacts_path, active: [["contacts"], ["index"]]
 
         - if content_for?(:secondary_navigation)
           = content_for :secondary_navigation
