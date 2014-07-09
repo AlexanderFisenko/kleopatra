@@ -1,0 +1,50 @@
+- content_for :image do
+  = image_tag 'service/serving.png'
+
+- content_for :secondary_navigation do
+  = render "secondary_nav"
+
+%article#serving
+  %h1.lined
+    сервировка
+  %p
+    Банкет холл Клеопатра внимательно относится к такому элементу праздника, как сервировка столов.
+  %p
+    Вы можете быть уверены в том, что все блюда без труда поместятся на банкетных столах, так как они сделаны по нестандартным размерам.
+  %p
+    Все необходимые элементы праздничного стола будут находиться на своих местах, в соответствии с требованиями сервировки.
+  %p
+    Наши сотрудники предложат на выбор разные цветовые гаммы скатертей и салфеток.
+
+  %section.serving
+    %section.info
+      %section.napkins
+        %h1
+          САЛФЕТКИ и СКАТЕРТИ:
+        %section.napkin
+          %section.figure
+            = image_tag 'service/serving/white_circle.png'
+          %section.text
+            белые
+        %section.napkin
+          %section.figure
+            = image_tag 'service/serving/beige_circle.png'
+          %section.text
+            бежевые
+        %section.napkin
+          %section.figure
+            = image_tag 'service/serving/burgundy_circle.png'
+          %section.text
+            бордовые
+
+      %section.toppers
+        %h1
+          НАПЕРОНЫ:
+        %section.topper
+          %section.figure
+            = image_tag 'service/serving/burgundy_circle.png'
+          %section.text
+            бордовые
+
+    %section.illustration
+      = image_tag 'service/serving/burgundy_topper.png'

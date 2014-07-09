@@ -26,9 +26,11 @@ Rails.application.routes.draw do
 
   get 'contacts' => 'contacts#index', as: :friendly_contacts
 
-  get 'order' => 'service#order', as: :friendly_order
-
-  get 'reservation' => 'service#reservation', as: :friendly_reservation
+  scope '/service' do
+    get 'order' => 'service#order', as: :friendly_order
+    get 'reservation' => 'service#reservation', as: :friendly_reservation
+    get 'serving' => 'service#serving', as: :friendly_serving
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

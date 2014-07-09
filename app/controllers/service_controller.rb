@@ -5,4 +5,7 @@ class ServiceController < ApplicationController
 
   def reservation
   end
+
+  def serving
+  end
 end

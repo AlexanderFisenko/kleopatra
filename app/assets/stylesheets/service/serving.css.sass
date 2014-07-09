@@ -1,0 +1,52 @@
+article#serving
+  section.serving
+    margin-top: 90px
+    @include row
+    section.info
+      @include span-columns(15 of 30)
+      h1
+        padding: 0
+        font-family: $main_font
+        font-weight: 200
+        font-size: 18px
+        text-align: left
+        padding-bottom: 18px
+      section.napkins, section.toppers
+        @include row
+        padding-bottom: 40px
+        padding-left: 50px
+
+        section.napkin
+          @include span-columns(1 of 3)
+
+          section.figure
+            @include span-columns(2 of 5, table)
+            padding-right: 0
+            img
+              width: 60px
+              vertical-align: middle
+          section.text
+            @include span-columns(3 of 5, table)
+            font-size: 16px
+            padding-left: 10px
+
+      section.toppers
+        padding-top: 34px
+        section.topper
+          section.figure
+
+            display: table-cell
+            img
+              width: 60px
+              vertical-align: middle
+
+          section.text
+            font-size: 16px
+            padding-left: 10px
+            display: table-cell
+
+    section.illustration
+      @include span-columns(15 of 30)
+      img
+        width: 500px
+        padding-left: 130px
