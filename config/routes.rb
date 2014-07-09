@@ -21,15 +21,14 @@ Rails.application.routes.draw do
   end
 
   get 'feedback' => 'feedback#index', as: :friendly_feedback
-
   get 'recommendations' => 'recommendations#index', as: :friendly_recommendations
-
   get 'contacts' => 'contacts#index', as: :friendly_contacts
 
-  scope '/service' do
+  scope '/facilities' do
     get 'order' => 'service#order', as: :friendly_order
     get 'reservation' => 'service#reservation', as: :friendly_reservation
     get 'serving' => 'service#serving', as: :friendly_serving
+    get 'service' => 'service#service', as: :friendly_service
   end
 
   # Example of regular route:

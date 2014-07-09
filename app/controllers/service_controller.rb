@@ -8,4 +8,7 @@ class ServiceController < ApplicationController
 
   def serving
   end
+
+  def service
+  end
 end
