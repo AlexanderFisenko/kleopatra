@@ -1,8 +1,7 @@
 - content_for :image do
   = image_tag 'service/reservation.png'
 
-- content_for :secondary_navigation do
-  = render "secondary_nav"
+= render "secondary_nav"
 
 %article#reservation
   %h1.lined
@@ -12,12 +11,12 @@
   %p
     тогда Вы вносите предоплату
     %span *
-    и можете быть уверены, 
+    и можете быть уверены,
   %p
     что этот день будет закреплен за Вами.
 
   %section.annotation
-    %p 
+    %p
       %span *
       Размер предоплаты для бронирования даты составляет 10 000 рублей.
     %p В предоплату входит: 2 000 рублей аренда зала и 8 000 рублей в счет банкетного меню.

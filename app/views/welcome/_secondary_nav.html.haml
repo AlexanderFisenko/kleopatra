@@ -1,13 +1,2 @@
-%section{class: 'secondary-nav', id: 'main'}
-  %section.unit
-    = link_to_unless_current 'о нас', root_path
-  %section.unit
-    = link_to_unless_current 'наши преимущества', friendly_advantages_path
-  %section.unit
-    = link_to_unless_current 'свадьба', friendly_wedding_path
-  %section.unit
-    = link_to_unless_current 'юбилей', friendly_anniversary_path
-  %section.unit
-    = link_to_unless_current 'корпоративное мероприятие', friendly_corporate_path
-  %section.unit
-    = link_to_unless_current 'выпускной вечер', friendly_prom_path
+:javascript
+  $("[data-secondary-nav=main]").show();

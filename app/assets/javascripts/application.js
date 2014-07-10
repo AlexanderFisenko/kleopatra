@@ -20,17 +20,35 @@
 
 
 $(document).ready(function(){
-/*  $("#halls-link").on("click", function(){
-    $("#halls").show();
-    $("#main").hide();
+
+  $("[data-show-nav=main]").on("click", function(event){
+    $("[data-secondary-nav=halls]").hide();
+    $("[data-secondary-nav=service]").hide();
+    $("[data-secondary-nav=substitude]").hide();
+    $("[data-secondary-nav=main]").show();
+    event.preventDefault();
   });
 
-  $("#main-link").on("click", function(){
-    $("#halls").hide();
-    $("#main").show();
-  });*/
+  $("[data-show-nav=service]").on("click", function(event){
+    $("[data-secondary-nav=halls]").hide();
+    $("[data-secondary-nav=main]").hide();
+    $("[data-secondary-nav=substitude]").hide();
+    $("[data-secondary-nav=service]").show();
+    event.preventDefault();
+  });
 
-/*  alert('1')*/
+  $("[data-show-nav=halls]").on("click", function(event){
+    $("[data-secondary-nav=main]").hide();
+    $("[data-secondary-nav=service]").hide();
+    $("[data-secondary-nav=substitude]").hide();
+    $("[data-secondary-nav=halls]").show();
+    event.preventDefault();
+  });
+
+
+
+
+
   $('.fancybox-thumb').fancybox({
     prevEffect  : 'none',
     nextEffect  : 'none',
