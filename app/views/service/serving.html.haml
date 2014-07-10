@@ -22,17 +22,17 @@
           САЛФЕТКИ и СКАТЕРТИ:
         %section.napkin
           %section.figure
-            = image_tag 'service/serving/white_circle.png'
+            = image_tag 'service/serving/white_circle.png', data: {action: "change-photo", path: image_path('service/serving/white.png')}
           %section.text
             белые
         %section.napkin
           %section.figure
-            = image_tag 'service/serving/beige_circle.png'
+            = image_tag 'service/serving/beige_circle.png', data: {action: "change-photo", path: image_path('service/serving/beige.png')}
           %section.text
             бежевые
         %section.napkin
           %section.figure
-            = image_tag 'service/serving/burgundy_circle.png'
+            = image_tag 'service/serving/burgundy_circle.png', data: {action: "change-photo", path: image_path('service/serving/burgundy.png')}
           %section.text
             бордовые
 
@@ -41,9 +41,9 @@
           НАПЕРОНЫ:
         %section.topper
           %section.figure
-            = image_tag 'service/serving/burgundy_circle.png'
+            = image_tag 'service/serving/burgundy_circle.png', data: {action: "change-photo", path: image_path('service/serving/burgundy_topper.png')}
           %section.text
             бордовые
 
     %section.illustration
-      = image_tag 'service/serving/burgundy_topper.png'
+      = image_tag '', data: {role: "picture"}

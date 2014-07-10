@@ -24,8 +24,17 @@ $(document).ready(function(){
   $("[data-primary-nav=link]").on("click", function(event){
     $("[data-secondary-nav]").hide();
     secondaryNav = $(event.currentTarget).data("showSecondaryNav");
-    $("[data-secondary-nav=" + secondaryNav +"]").fadeIn(300);
+    $("[data-secondary-nav=" + secondaryNav +"]").fadeIn(500);
     event.preventDefault();
+  });
+
+  $("[data-action=change-photo]").mouseenter(function(event){
+    path = $(event.currentTarget).data("path");
+    $("[data-role=picture]").attr("src", path);
+  });
+
+  $("[data-action=change-photo]").mouseleave(function(){
+    $("[data-role=picture]").attr("src", "");
   });
 
   $('.fancybox-thumb').fancybox({
