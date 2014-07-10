@@ -21,33 +21,12 @@
 
 $(document).ready(function(){
 
-  $("[data-show-nav=main]").on("click", function(event){
-    $("[data-secondary-nav=halls]").hide();
-    $("[data-secondary-nav=service]").hide();
-    $("[data-secondary-nav=substitude]").hide();
-    $("[data-secondary-nav=main]").show();
+  $("[data-primary-nav=link]").on("click", function(event){
+    $("[data-secondary-nav]").hide();
+    secondaryNav = $(event.currentTarget).data("showSecondaryNav");
+    $("[data-secondary-nav=" + secondaryNav +"]").show();
     event.preventDefault();
   });
-
-  $("[data-show-nav=service]").on("click", function(event){
-    $("[data-secondary-nav=halls]").hide();
-    $("[data-secondary-nav=main]").hide();
-    $("[data-secondary-nav=substitude]").hide();
-    $("[data-secondary-nav=service]").show();
-    event.preventDefault();
-  });
-
-  $("[data-show-nav=halls]").on("click", function(event){
-    $("[data-secondary-nav=main]").hide();
-    $("[data-secondary-nav=service]").hide();
-    $("[data-secondary-nav=substitude]").hide();
-    $("[data-secondary-nav=halls]").show();
-    event.preventDefault();
-  });
-
-
-
-
 
   $('.fancybox-thumb').fancybox({
     prevEffect  : 'none',

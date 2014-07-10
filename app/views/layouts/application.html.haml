@@ -76,11 +76,11 @@
       %section.nav
         %section.primary-nav
           %section.element
-            = active_link_to "ГЛАВНАЯ", root_path, active: [["welcome"], ["index", "advantages", "wedding", "anniversary", "corporate", "prom"]], data: {show_nav: "main"}
+            = active_link_to "ГЛАВНАЯ", root_path, active: [["welcome"], ["index", "advantages", "wedding", "anniversary", "corporate", "prom"]], data: {primary_nav: :link, show_secondary_nav: "main"}
           %section.element
-            = active_link_to "ЗАЛЫ", friendly_egyptian_hall_path, active: [["halls"], ["egyptian_hall", "mirror_hall"]], data: {show_nav: "halls"}
+            = active_link_to "ЗАЛЫ", friendly_egyptian_hall_path, active: [["halls"], ["egyptian_hall", "mirror_hall"]], data: {primary_nav: :link, show_secondary_nav: "halls"}
           %section.element
-            = active_link_to "НАШИ УСЛУГИ", friendly_order_path, active: [["service"], ["order", "reservation", "serving", "service"]], data: {show_nav: "service"}
+            = active_link_to "НАШИ УСЛУГИ", friendly_order_path, active: [["service"], ["order", "reservation", "serving", "service"]], data: {primary_nav: :link, show_secondary_nav: "service"}
           %section.element
             %p НАШИ РЕКОМЕНДАЦИИ
           %section.element
@@ -122,7 +122,7 @@
           %section.unit
             = link_to_unless_current 'дополнительные услуги', "#"
 
-        %section.secondary-nav-substitude{data: {secondary_nav: "substitude"}}
+        %section{class: 'secondary-nav', id: 'secondary-nav-substitude', data: {secondary_nav: "substitude"}}
 
     %section#figure
       - if content_for?(:image)
