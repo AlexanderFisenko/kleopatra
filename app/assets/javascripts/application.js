@@ -24,7 +24,7 @@ $(document).ready(function(){
   $("[data-primary-nav=link]").on("click", function(event){
     $("[data-secondary-nav]").hide();
     secondaryNav = $(event.currentTarget).data("showSecondaryNav");
-    $("[data-secondary-nav=" + secondaryNav +"]").show();
+    $("[data-secondary-nav=" + secondaryNav +"]").fadeIn(300);
     event.preventDefault();
   });
 
