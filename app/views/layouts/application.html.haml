@@ -159,14 +159,16 @@
 
         %section.row
           %h1
-            НАШИ УСЛУГИ
-          сервировка
+            = link_to "НАШИ УСЛУГИ", friendly_order_path
+          = link_to "заказ банкета", friendly_order_path
           %br/
-          дополнительные услуги
+          = link_to 'бронирование даты', friendly_reservation_path
           %br/
-          аренда зала
+          = link_to_unless_current 'сервировка', friendly_serving_path
           %br/
-          заказ банкета
+          = link_to_unless_current 'обслуживание', friendly_service_path
+          %br/
+          = link_to_unless_current 'дополнительные услуги', "#"
 
         %section.row
           %h1
@@ -185,10 +187,10 @@
 
         %section.row
           %h1
-            ОТЗЫВЫ
+            = link_to "ОТЗЫВЫ", friendly_feedback_path
 
         %section.row
           %h1
-            КОНТАКТЫ
+            = link_to "КОНТАКТЫ", friendly_contacts_path
 
     = content_for(:javascript)
