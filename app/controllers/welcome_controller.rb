@@ -1,9 +1,7 @@
 #encoding: UTF-8
 class WelcomeController < ApplicationController
   def index
-    set_meta_tags title: 'О нас',
-                  keywords: %w[банкеты свадьбы клеопатра банкет-холл юбилеи корпоративы праздники магнитогорск],
-                  description: "Свадьбы, банкеты в Магнитогорске, банкет-холл Клеопатра"
+    set_meta_tags title: 'О нас', description: "Свадьбы, банкеты в Магнитогорске, банкет-холл Клеопатра"
   end
 
   def advantages
