@@ -84,7 +84,7 @@
           %section.element
             %p НАШИ РЕКОМЕНДАЦИИ
           %section.element
-            %p ГАЛЕРЕЯ
+            = active_link_to "ГАЛЕРЕЯ", friendly_gallery_path, active: [["gallery"], ["index"]]
           %section.element
             = active_link_to "ОТЗЫВЫ", friendly_feedback_path, active: [["feedback"], ["index"]]
           %section.element
@@ -183,7 +183,7 @@
 
         %section.row
           %h1
-            ГАЛЕРЕЯ
+            = link_to "ГАЛЕРЕЯ", friendly_gallery_path
 
         %section.row
           %h1

@@ -15,6 +15,7 @@
 //= require jquery.bxslider.min
 //= require jquery.fancybox.pack
 //= require jquery.fancybox-thumbs
+//= require jquery.scrollUp.min
 //= require contacts
 //= require_tree
 
@@ -26,6 +27,13 @@ $(document).ready(function(){
     secondaryNav = $(event.currentTarget).data("showSecondaryNav");
     $("[data-secondary-nav=" + secondaryNav +"]").fadeIn(500);
     event.preventDefault();
+  });
+
+
+
+  $('a[href*=#]').on('click', function(event){
+      event.preventDefault();
+      $('html,body').animate({scrollTop:$(this.hash).offset().top - 50}, 500);
   });
 
   $("[data-action=change-photo]").mouseenter(function(event){

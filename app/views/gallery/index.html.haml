@@ -1,0 +1,102 @@
+- content_for :image do
+  = image_tag 'gallery/gallery.png'
+
+:javascript
+  $("#secondary-nav-substitude").show();
+
+
+  $.scrollUp({
+    scrollName: 'scrollUp', // Element ID
+    scrollDistance: '1000', // Distance from top before showing element (px)
+    topSpeed: 300, // Speed back to top (ms)
+    animation: 'fade', // Fade, slide, none
+    animationInSpeed: 200, // Animation in speed (ms)
+    animationOutSpeed: 200, // Animation out speed (ms)
+    scrollText: '<i class="fa fa-chevron-circle-up"></i>', // Text for element
+    activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+  });
+
+%article#gallery
+  %h1.lined
+    галерея
+  %section.images
+    %section.image
+      = link_to(image_tag('gallery/images/1m.png'), image_path('gallery/images/1.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/2m.png'), image_path('gallery/images/2.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/3m.png'), image_path('gallery/images/3.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/4m.png'), image_path('gallery/images/4.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/5m.png'), image_path('gallery/images/5.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/6m.png'), image_path('gallery/images/6.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/7m.png'), image_path('gallery/images/7.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/8m.png'), image_path('gallery/images/8.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/9m.png'), image_path('gallery/images/9.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/10m.png'), image_path('gallery/images/10.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/11m.png'), image_path('gallery/images/11.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/12m.png'), image_path('gallery/images/12.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/13m.png'), image_path('gallery/images/13.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/14m.png'), image_path('gallery/images/14.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/15m.png'), image_path('gallery/images/15.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/16m.png'), image_path('gallery/images/16.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/17m.png'), image_path('gallery/images/17.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/18m.png'), image_path('gallery/images/18.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/19m.png'), image_path('gallery/images/19.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/20m.png'), image_path('gallery/images/20.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/21m.png'), image_path('gallery/images/21.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/22m.png'), image_path('gallery/images/22.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/23m.png'), image_path('gallery/images/23.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/24m.png'), image_path('gallery/images/24.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/25m.png'), image_path('gallery/images/25.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/26m.png'), image_path('gallery/images/26.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/27m.png'), image_path('gallery/images/27.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/28m.png'), image_path('gallery/images/28.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/29m.png'), image_path('gallery/images/29.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/30m.png'), image_path('gallery/images/30.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/31m.png'), image_path('gallery/images/31.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/32m.png'), image_path('gallery/images/32.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/33m.png'), image_path('gallery/images/33.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/34m.png'), image_path('gallery/images/34.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/35m.png'), image_path('gallery/images/35.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/36m.png'), image_path('gallery/images/36.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/37m.png'), image_path('gallery/images/37.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/38m.png'), image_path('gallery/images/38.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/39m.png'), image_path('gallery/images/39.png'), class: "fancybox-thumb", rel: "fancybox-thumb")
+    %section.image
+      = link_to(image_tag('gallery/images/40m.png'), image_path('gallery/images/40.png'), class: "fancybox-thumb", rel: "fancybox-thumb")

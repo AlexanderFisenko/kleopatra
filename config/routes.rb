@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get 'feedback' => 'feedback#index', as: :friendly_feedback
   get 'recommendations' => 'recommendations#index', as: :friendly_recommendations
   get 'contacts' => 'contacts#index', as: :friendly_contacts
+  get 'gallery' => 'gallery#index', as: :friendly_gallery
 
   scope '/facilities' do
     get 'order' => 'service#order', as: :friendly_order

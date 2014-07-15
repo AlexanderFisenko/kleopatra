@@ -1,0 +1,31 @@
+article#gallery
+  section.images
+    text-align: center
+
+    section.image
+      display: block
+      width: 300px
+      height: 217px
+      padding: 20px 24px
+      float: left
+      img
+        @include fill-parent
+
+#scrollUp
+  top: 50px
+  right: 18px
+  font-size: 17px
+  font-weight: 700
+  color: #212121
+  text-decoration: none
+  vertical-align: middle
+
+  &:hover
+    color: #777
+  i
+    font-size: 40px
+    margin-right: 6px
+    color: $secondary-color
+
+  @include media($mobile)
+    display: none!important
