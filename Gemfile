@@ -45,6 +45,9 @@ gem 'active_link_to'
 gem 'execjs'
 
 gem 'therubyracer', '~> 0.10.2'
+
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
