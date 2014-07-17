@@ -48,6 +48,9 @@ gem 'therubyracer', '~> 0.10.2'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
+
+gem 'carrierwave'
+gem 'rmagick'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
