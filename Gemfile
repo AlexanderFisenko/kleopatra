@@ -55,6 +55,9 @@ gem 'rmagick'
 gem 'pry'
 
 gem 'enumerize'
+
+LANG="en_US.UTF-8"
+LC_ALL="en_US.UTF-8"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
