@@ -21,4 +21,4 @@
   %section.images
     - @photos.each do |photo|
       %section.image
-        = link_to(image_tag(photo.image_url(:small).to_s), image_path(photo.image_url(:large).to_s), class: "fancybox-thumb", rel: "fancybox-thumb")
+        = link_to(image_tag(photo.image_url(:small_gallery).to_s), image_path(photo.image_url(:large_gallery).to_s), class: "fancybox-thumb", rel: "fancybox-thumb")

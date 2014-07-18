@@ -32,13 +32,25 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-  version :large do
-    process :resize_to_limit => [1132, 759], quality: 90
+
+
+  version :large_gallery, :if => :is_large_gallery? do
+    process :resize_to_fill => [1132, 759]
   end
 
-  version :small do
-    process :resize_to_limit => [325, 220]
+  version :small_gallery, :if => :is_small_gallery? do
+    process :resize_to_fill => [325, 220]
   end
+
+  version :large_feedback, :if => :is_large_feedback? do
+    process :resize_to_fit => [400]
+  end
+
+  version :small_feedback, :if => :is_small_feedback? do
+    process :resize_to_fill => [325, 469]
+  end
+
+
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
@@ -51,5 +63,23 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+  protected
+
+  def is_large_gallery?(picture)
+    model.page_name.to_s == "галерея"
+  end
+
+  def is_small_gallery?(picture)
+    model.page_name.to_s == "галерея"
+  end
+
+  def is_large_feedback?(picture)
+    model.page_name.to_s == "отзывы"
+  end
+
+  def is_small_feedback?(picture)
+    model.page_name.to_s == "отзывы"
+  end
+
 
 end

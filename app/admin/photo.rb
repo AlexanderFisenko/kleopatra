@@ -1,10 +1,10 @@
 ActiveAdmin.register Photo do
 
-  
+
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
-  permit_params :image
+  permit_params :image, :page_name
   #
   # or
   #
@@ -13,5 +13,5 @@ ActiveAdmin.register Photo do
   #  permitted << :other if resource.something?
   #  permitted
   # end
-  
+
 end
