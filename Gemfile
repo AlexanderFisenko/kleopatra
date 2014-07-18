@@ -51,6 +51,8 @@ gem 'devise'
 
 gem 'carrierwave'
 gem 'rmagick'
+
+gem 'pry'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
