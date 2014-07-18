@@ -53,6 +53,8 @@ gem 'carrierwave'
 gem 'rmagick'
 
 gem 'pry'
+
+gem 'enumerize'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
