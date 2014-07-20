@@ -37,12 +37,14 @@ $(document).ready(function(){
   });
 
   $("[data-action=change-photo]").mouseenter(function(event){
+    $("[data-role=picture]").show();
     path = $(event.currentTarget).data("path");
     $("[data-role=picture]").attr("src", path);
   });
 
   $("[data-action=change-photo]").mouseleave(function(){
     $("[data-role=picture]").attr("src", "");
+    $("[data-role=picture]").hide();
   });
 
   $('.fancybox-thumb').fancybox({
