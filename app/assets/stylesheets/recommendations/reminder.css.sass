@@ -20,12 +20,37 @@ article#reminder
   .table
     table
       margin: 12px auto 0
+      border-collapse: collapse
+      p
+        text-align: left
+        padding: 26px 70px 26px 10px
+
+        line-height: 1.3
+
+      tr
+        td:first-of-type
+          border-bottom: 1px solid $secondary-color
+
+
+        td:last-of-type
+          border-bottom: 1px solid $secondary-color
+          p
+            text-align: center
+            padding: 26px 40px
+
+        td:nth-of-type(2)
+          border: 1px solid $secondary-color
+
+      tr:last-of-type td
+        border-bottom: none
+
+      tr:first-of-type td:nth-of-type(2)
+        border-top: none
 
 
 
 
-    table,tr,td
-      border: 1px solid black
+
 
 
 
