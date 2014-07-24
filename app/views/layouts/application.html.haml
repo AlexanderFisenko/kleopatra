@@ -83,7 +83,7 @@
           %section.element
             = active_link_to "НАШИ УСЛУГИ", friendly_order_path, active: [["service"], ["order", "reservation", "serving", "service"]], data: {primary_nav: :link, show_secondary_nav: "service"}
           %section.element
-            %p НАШИ РЕКОМЕНДАЦИИ
+            = active_link_to "НАШИ РЕКОМЕНДАЦИИ", friendly_reminder_path, active: [["recommendations"], ["reminder"]], data: {primary_nav: :link, show_secondary_nav: "recommendations"}
           %section.element
             = active_link_to "ГАЛЕРЕЯ", friendly_gallery_path, active: [["gallery"], ["index"]]
           %section.element
@@ -122,6 +122,18 @@
             = link_to_unless_current 'обслуживание', friendly_service_path
           %section.unit
             = link_to_unless_current 'дополнительные услуги', "#"
+
+        %section{class: 'secondary-nav', id: 'recommendations', data: {secondary_nav: "recommendations"}}
+          %section.unit
+            = link_to_unless_current 'памятка', friendly_reminder_path
+          %section.unit
+            = link_to_unless_current 'ведущие', "#"
+          %section.unit
+            = link_to_unless_current 'фотографы', "#"
+          %section.unit
+            = link_to_unless_current 'оформители', "#"
+          %section.unit
+            = link_to_unless_current 'кондитеры', "#"
 
         %section{class: 'secondary-nav', id: 'secondary-nav-substitude', data: {secondary_nav: "substitude"}}
 
@@ -173,7 +185,9 @@
 
         %section.row
           %h1
-            НАШИ РЕКОМЕНДАЦИИ
+            = link_to "НАШИ РЕКОМЕНДАЦИИ", friendly_reminder_path
+          = link_to "памятка", friendly_reminder_path
+          %br/
           ведущие
           %br/
           фотографы
