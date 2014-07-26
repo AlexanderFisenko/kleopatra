@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   end
 
   scope '/recommendations' do
-    get 'reminder' => 'recommendations#reminder', as: :friendly_reminder
+    # get 'reminder' => 'recommendations#reminder', as: :friendly_reminder
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
