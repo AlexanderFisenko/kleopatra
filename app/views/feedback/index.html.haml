@@ -8,6 +8,8 @@
 %article#feedback
   %h1.lined
     отзывы
+  %p
+    Банкет холл Клеопатра глазами наших гостей.
   %section.feedback-zone
     - @photos.each do |photo|
       = link_to(image_tag(photo.image_url(:small_feedback).to_s), image_path(photo.image_url(:large_feedback).to_s), class: "fancybox-thumb", rel: "fancybox-thumb")
