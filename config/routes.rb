@@ -31,6 +31,7 @@ Rails.application.routes.draw do
     get 'reservation' => 'service#reservation', as: :friendly_reservation
     get 'serving' => 'service#serving', as: :friendly_serving
     get 'service' => 'service#service', as: :friendly_service
+    get 'additional_service' => 'service#additional_service', as: :friendly_additional_service
   end
 
   scope '/recommendations' do

@@ -81,7 +81,7 @@
           %section.element
             = active_link_to "ЗАЛЫ", friendly_egyptian_hall_path, active: [["halls"], ["egyptian_hall", "mirror_hall"]], data: {primary_nav: :link, show_secondary_nav: "halls"}
           %section.element
-            = active_link_to "НАШИ УСЛУГИ", friendly_order_path, active: [["service"], ["order", "reservation", "serving", "service"]], data: {primary_nav: :link, show_secondary_nav: "service"}
+            = active_link_to "НАШИ УСЛУГИ", friendly_order_path, active: [["service"], ["order", "reservation", "serving", "service", "additional_service"]], data: {primary_nav: :link, show_secondary_nav: "service"}
           %section.element
             = active_link_to "НАШИ РЕКОМЕНДАЦИИ", "#", active: [["recommendations"], []], data: {primary_nav: :link, show_secondary_nav: "recommendations"}
           %section.element
@@ -121,7 +121,7 @@
           %section.unit
             = link_to_unless_current 'обслуживание', friendly_service_path
           %section.unit
-            = link_to_unless_current 'дополнительные услуги', "#"
+            = link_to_unless_current 'дополнительные услуги', friendly_additional_service_path
 
         %section{class: 'secondary-nav', id: 'recommendations', data: {secondary_nav: "recommendations"}}
           %section.unit

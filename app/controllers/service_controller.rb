@@ -16,4 +16,8 @@ class ServiceController < ApplicationController
   def service
   	set_meta_tags title: 'Обслуживание', description: "Обслуживание банкетов в Магнитогорске"
   end
+
+  def additional_service
+    set_meta_tags title: 'Дополнительный сервис', description: "Обслуживание банкетов в Магнитогорске"
+  end
 end
