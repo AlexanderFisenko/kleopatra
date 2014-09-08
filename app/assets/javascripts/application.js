@@ -42,10 +42,10 @@ $(document).ready(function(){
     $("[data-role=picture]").attr("src", path);
   });
 
-  $("[data-action=change-photo]").mouseleave(function(){
-    $("[data-role=picture]").attr("src", "");
-    $("[data-role=picture]").hide();
-  });
+  // $("[data-action=change-photo]").mouseleave(function(){
+  //   $("[data-role=picture]").attr("src", "");
+  //   $("[data-role=picture]").hide();
+  // });
 
   $('.fancybox-thumb').fancybox({
     prevEffect  : 'none',

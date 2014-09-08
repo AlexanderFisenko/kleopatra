@@ -1,0 +1,44 @@
+article#order
+  section.services
+    @include row
+    div.service
+      @include span-columns(1 of 4)
+      margin-top: 60px
+      line-height: 1.2
+      text-align: center
+      h1
+        font-family: $main_font
+        font-size: 15px
+        padding-top: 0px
+        padding-bottom: 5px
+      div.price
+        font-size: 15px
+      div.figure
+        margin-top: 40px
+        img
+          width: 160px
+  div.bracket
+    text-align: center
+    margin-top: 30px
+    img
+      width: 980px
+  div.total
+    margin: 0 auto
+  section.illustration
+    margin: 0 auto
+    text-align: center
+    img
+      display: none
+      width: 700px
+  section.attention
+    margin-top: 40px
+    margin-left: 200px
+    p
+      text-align: left
+      line-height: 2.3
+      i
+        font-size: 10px
+        vertical-align: middle
+        margin-right: 4px
+      i.invisible
+        color: white

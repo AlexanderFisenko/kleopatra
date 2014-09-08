@@ -12,3 +12,48 @@
     хотим предложить Вам дополнительное оформление зала.
   %p
     Белые ткани предадут торжественности, а вазы с тюльпанами добавят нотку романтики.
+
+  %section.services
+    %div.service
+      %h1 ФУРШЕТНАЯ ЮБКА:
+      %div.price
+        300 рублей
+      %div.figure
+        = image_tag 'service/additional_service/юбка.png', data: {action: "change-photo", path: image_path('service/additional_service/юбка.бол.png')}
+    %div.service
+      %h1 ЧЕХЛЫ НА СТУЛЬЯ:
+      %div.price
+        40 рублей на 1 стул
+      %div.figure
+        = image_tag 'service/additional_service/чехол.png', data: {action: "change-photo", path: image_path('service/additional_service/чехол.бол.png')}
+    %div.service
+      %h1 ПЕРЕДВИЖНОЙ СТОЛИК С ФУРШЕТНОЙ ЮБКОЙ ДЛЯ ТОРТА:
+      %div.price
+        300 рублей
+      %div.figure
+        = image_tag 'service/additional_service/стол.png', data: {action: "change-photo", path: image_path('service/additional_service/стол.бол.png')}
+    %div.service
+      %h1 ВАЗЫ С ЦВЕТАМИ:
+      %div.price
+        в зале и на столах
+        %br
+        50рублей/шт
+      %div.figure
+        = image_tag 'service/additional_service/ваза.png', data: {action: "change-photo", path: image_path('service/additional_service/ваза.бол.png')}
+  %div.bracket
+    = image_tag 'service/additional_service/скобка.png'
+  %div.total
+    %p ВЕСЬ КОМПЛЕКТ
+    %p 2 500 рублей
+  %section.illustration
+    = image_tag '', data: {role: "picture"}
+  %section.attention
+    %p
+      %i.fa.fa-square.invisible
+      ВНИМАНИЕ:
+    %p
+      %i.fa.fa-square
+      ПРОДЛЕНИЕ БАНКЕТА ПОСЛЕ 24:00 -  3000 рублей за каждый последующий час
+    %p
+      %i.fa.fa-square
+      ИСПОЛЬЗОВАНИЕ В ЗАЛЕ СВОЕГО ШОКОЛАДНОГО ФОНТАНА ИЛИ СВЕЧЕЙ - 3000 рублей
