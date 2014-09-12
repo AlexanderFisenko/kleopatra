@@ -56,7 +56,8 @@ $(document).ready(function(){
   });
 
   $("[data-action=change-photo1]").mouseleave(function(){
-    $("[data-role=picture], [data-page=additional-service").attr("src", "/assets/service/additional_service/допы.png");
+    path = $("[data-role=picture], [data-page=additional-service]").data("default-path")
+    $("[data-role=picture], [data-page=additional-service]").attr("src", path);
   });
 
   $('.fancybox-thumb').fancybox({
