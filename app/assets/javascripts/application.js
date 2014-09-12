@@ -36,16 +36,28 @@ $(document).ready(function(){
       $('html,body').animate({scrollTop:$(this.hash).offset().top - 50}, 500);
   });
 
+  /* for /facilities/serving  */
   $("[data-action=change-photo]").mouseenter(function(event){
     $("[data-role=picture]").show();
     path = $(event.currentTarget).data("path");
     $("[data-role=picture]").attr("src", path);
   });
 
-  // $("[data-action=change-photo]").mouseleave(function(){
-  //   $("[data-role=picture]").attr("src", "");
-  //   $("[data-role=picture]").hide();
-  // });
+  $("[data-action=change-photo]").mouseleave(function(){
+    $("[data-role=picture]").attr("src", "");
+    $("[data-role=picture]").hide();
+  });
+
+  /* for /facilities/additional-service  */
+  $("[data-action=change-photo1]").mouseenter(function(event){
+    $("[data-role=picture], [data-page=additional-service").show();
+    path = $(event.currentTarget).data("path");
+    $("[data-role=picture], [data-page=additional-service").attr("src", path);
+  });
+
+  $("[data-action=change-photo1]").mouseleave(function(){
+    $("[data-role=picture], [data-page=additional-service").attr("src", "/assets/service/additional_service/допы.png");
+  });
 
   $('.fancybox-thumb').fancybox({
     prevEffect  : 'none',
