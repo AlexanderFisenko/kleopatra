@@ -26,6 +26,7 @@ gem 'haml-rails'
 
 group :production do
   gem 'mysql2'
+  gem 'therubyracer'
 end
 
 group :development do
@@ -39,12 +40,10 @@ gem 'font-awesome-rails', '~> 4.0.3'
 
 gem 'capistrano', '2.13.5'
 gem 'unicorn'
-
+gem 'kgio', '~> 2.8.1'
 gem 'active_link_to'
 
 gem 'execjs'
-
-gem 'therubyracer', '~> 0.10.2'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'

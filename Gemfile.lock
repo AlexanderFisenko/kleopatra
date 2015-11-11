@@ -116,7 +116,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.8.1)
-    libv8 (3.3.10.4)
+    libv8 (3.16.14.13)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -173,6 +173,7 @@ GEM
       polyamorous (~> 1.0.0)
     rdoc (4.1.1)
       json (~> 1.4)
+    ref (2.0.0)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rmagick (2.13.2)
@@ -197,8 +198,9 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.9)
-    therubyracer (0.10.2)
-      libv8 (~> 3.3.10)
+    therubyracer (0.12.2)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     thread_safe (0.3.3)
     tilt (1.4.1)
@@ -234,6 +236,7 @@ DEPENDENCIES
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
+  kgio (~> 2.8.1)
   meta-tags
   mysql2
   neat (~> 1.5.0)
@@ -244,6 +247,9 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   spring
   sqlite3
-  therubyracer (~> 0.10.2)
+  therubyracer
   uglifier (>= 1.3.0)
   unicorn
+
+BUNDLED WITH
+   1.10.6
