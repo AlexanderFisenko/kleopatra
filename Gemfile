@@ -54,6 +54,7 @@ gem 'rmagick', require: false
 
 gem 'pry'
 gem 'active_admin_editor'
+gem 'ckeditor'
 gem 'enumerize'
 
 # Use ActiveModel has_secure_password
