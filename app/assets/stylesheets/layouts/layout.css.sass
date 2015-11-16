@@ -81,7 +81,6 @@ body
   section#footer
     background-image: image-url('footer.png')
     bottom: 0px
-    height: 250px
     margin-top: 70px
     font-size: 15px
     padding-top: 60px
@@ -96,12 +95,33 @@ body
         display: inline-block
         padding: 0 24px
         vertical-align: top
+        text-transform: lowercase
+        a
+          text-transform: lowercase
         h1
           font-family: $main_font
           padding-bottom: 10px
           font-size: 16px
           text-align: left
           padding-top: 0px
+          text-transform: uppercase
+          a
+            text-transform: uppercase
+       
+        .social
+          img
+            width: 30px
+            padding: 0 2px
+            -webkit-transition: 0.2s ease-in-out
+            -moz-transition: 0.2s ease-in-out
+            -o-transition: 0.2s ease-in-out
+            transition: 0.2s ease-in-out
+            &:hover
+              -webkit-transform: scale(1.5)
+              -moz-transform: scale(1.5)
+              -o-transform: scale(1.5)
+              -ms-transform: scale(1.5)
+              transform: scale(1.5)
 
 
 

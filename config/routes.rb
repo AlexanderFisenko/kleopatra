@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   scope '/halls' do
     get 'egyptian' => 'halls#egyptian_hall', as: :friendly_egyptian_hall
     get 'mirror' => 'halls#mirror_hall', as: :friendly_mirror_hall
+    get 'small' => 'halls#small_hall', as: :friendly_small_hall
   end
 
   get 'feedback' => 'feedback#index', as: :friendly_feedback
@@ -29,14 +30,14 @@ Rails.application.routes.draw do
   scope '/facilities' do
     get 'order' => 'service#order', as: :friendly_order
     get 'reservation' => 'service#reservation', as: :friendly_reservation
+    get 'food_menu' => 'service#food_menu', as: :friendly_food_menu
     get 'serving' => 'service#serving', as: :friendly_serving
     get 'service' => 'service#service', as: :friendly_service
     get 'additional-service' => 'service#additional_service', as: :friendly_additional_service
+    get 'sales' => 'service#sales', as: :friendly_sales
   end
 
-  scope '/recommendations' do
-    # get 'reminder' => 'recommendations#reminder', as: :friendly_reminder
-  end
+  get '/recommendations/:url' => 'recommendations#index', as: :recommendations
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

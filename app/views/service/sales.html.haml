@@ -1,0 +1,18 @@
+- content_for :image do
+  = image_tag 'sales.png'
+
+= render "secondary_nav"
+
+%article{id: 'sales', class: 'special-pages'}
+  %h1.lined акции
+  %p Мы предлагаем вам сэкономить и воспользоваться нашими акциями:
+  %section.special-pages-content.row
+    - @pages.in_groups_of(2, false) do |pages_row|
+      .col-md-6
+        - pages_row.each do |page|
+          .special-page.row
+            .col-md-6
+              .thumbnail= image_tag(page.image_url(:special_page))
+            .col-md-6
+              .caption= raw(page.content)
+

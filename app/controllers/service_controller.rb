@@ -9,6 +9,10 @@ class ServiceController < ApplicationController
     set_meta_tags title: 'Бронирование даты', description: "Забронировать банкетный зал в Магнитогорске"
   end
 
+  def food_menu
+    set_meta_tags title: 'Меню', description: "Банкетное меню Магнитогорск"
+  end
+
   def serving
     set_meta_tags title: 'Сервировка', description: "Оформление банкетного зала в Магнитогорске"
   end
@@ -19,5 +23,10 @@ class ServiceController < ApplicationController
 
   def additional_service
     set_meta_tags title: 'Дополнительный сервис', description: "Обслуживание банкетов в Магнитогорске"
+  end
+
+  def sales
+    @pages = SpecialPage.where(url: :sales)
+    set_meta_tags title: 'Акции', description: "Стоимость банкета в Магнитогорске"
   end
 end

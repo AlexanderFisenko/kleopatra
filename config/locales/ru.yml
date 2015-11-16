@@ -1,0 +1,15 @@
+ru:
+  time:
+   formats:
+     long: "%Y-%m-%d %H:%M:%S"
+  enumerize:
+    special_page:
+      url:
+        show_presenters: "Ведущие"
+        decorators: "Оформители"
+        photographers: "Фотографы"
+        videographers: "Видеографы"
+        stylists: "Стилисты"
+        candy_makers: "Кондитеры"
+        sales: "Акции"
+

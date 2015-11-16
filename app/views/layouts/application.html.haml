@@ -4,7 +4,7 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application'
     = csrf_meta_tags
-    = display_meta_tags site: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра', reverse: true, separator: '|', keywords: %w[банкеты свадьбы клеопатра банкет-холл юбилеи корпоративы праздники магнитогорск]
+    = display_meta_tags site: 'Свадьба в Магнитогорске - Банкет-холл Клеопатра', reverse: true, separator: '|', keywords: %w(банкеты свадьбы клеопатра банкет-холл юбилеи корпоративы праздники магнитогорск)
 
     %meta{name: 'yandex-verification', content: '6b3000b602aee379'}
     %meta{name: 'google-site-verification', content: 'GCZrZYqSRdvsJF5rnKhu8GauHneIL0gOYtRZvJixLSc'}
@@ -81,7 +81,7 @@
           %section.element
             = active_link_to "ЗАЛЫ", friendly_egyptian_hall_path, active: [["halls"], ["egyptian_hall", "mirror_hall"]], data: {primary_nav: :link, show_secondary_nav: "halls"}
           %section.element
-            = active_link_to "НАШИ УСЛУГИ", friendly_order_path, active: [["service"], ["order", "reservation", "serving", "service", "additional_service"]], data: {primary_nav: :link, show_secondary_nav: "service"}
+            = active_link_to "НАШИ УСЛУГИ", friendly_order_path, active: [["service"], ["order", "reservation", "food_menu", "serving", "service", "additional_service", "sales"]], data: {primary_nav: :link, show_secondary_nav: "service"}
           %section.element
             = active_link_to "НАШИ РЕКОМЕНДАЦИИ", "#", active: [["recommendations"], []], data: {primary_nav: :link, show_secondary_nav: "recommendations"}
           %section.element
@@ -110,6 +110,8 @@
             = link_to_unless_current 'египетский зал', friendly_egyptian_hall_path
           %section.unit
             = link_to_unless_current 'зеркальный зал', friendly_mirror_hall_path
+          %section.unit
+            = link_to_unless_current 'малый зал', friendly_small_hall_path
 
         %section{class: 'secondary-nav', id: 'service', data: {secondary_nav: "service"}}
           %section.unit
@@ -117,29 +119,37 @@
           %section.unit
             = link_to_unless_current 'бронирование даты', friendly_reservation_path
           %section.unit
+            = link_to_unless_current 'меню', "#"
+          %section.unit
             = link_to_unless_current 'сервировка', friendly_serving_path
           %section.unit
             = link_to_unless_current 'обслуживание', friendly_service_path
           %section.unit
             = link_to_unless_current 'дополнительные услуги', friendly_additional_service_path
+          %section.unit
+            = link_to_unless_current 'акции', friendly_sales_path
 
         %section{class: 'secondary-nav', id: 'recommendations', data: {secondary_nav: "recommendations"}}
           %section.unit
-            = link_to_unless_current 'ведущие', "#"
+            = link_to_unless_current 'ведущие', recommendations_path(SpecialPage.find_by(url: :show_presenters))
           %section.unit
-            = link_to_unless_current 'фотографы', "#"
+            = link_to_unless_current 'оформители', recommendations_path(SpecialPage.find_by(url: :decorators))
           %section.unit
-            = link_to_unless_current 'оформители', "#"
+            = link_to_unless_current 'фотографы', recommendations_path(SpecialPage.find_by(url: :photographers))
           %section.unit
-            = link_to_unless_current 'кондитеры', "#"
+            = link_to_unless_current 'видеографы', recommendations_path(SpecialPage.find_by(url: :videographers))
+          %section.unit
+            = link_to_unless_current 'стилисты', recommendations_path(SpecialPage.find_by(url: :stylists))
+          %section.unit
+            = link_to_unless_current 'кондитеры', recommendations_path(SpecialPage.find_by(url: :candy_makers))
 
         %section{class: 'secondary-nav', id: 'secondary-nav-substitude', data: {secondary_nav: "substitude"}}
 
     %section#figure
       - if content_for?(:image)
         = content_for :image
-      - else
-        = image_tag 'slider_substitude.jpg'
+      -# - else
+      -#   = image_tag 'slider_substitude.jpg'
 
     %section#body
       = yield
@@ -148,60 +158,67 @@
       %section.help
         %section.row
           %h1
-            = link_to "ГЛАВНАЯ", root_path
-          = link_to "о нас", root_path
+            = link_to_unless_current "главная", root_path
+          = link_to_unless_current "о нас", root_path
           %br/
-          = link_to "наши преимущеста", friendly_advantages_path
+          = link_to_unless_current "наши преимущеста", friendly_advantages_path
           %br/
-          = link_to "свадьбы", friendly_wedding_path
+          = link_to_unless_current "свадьбы", friendly_wedding_path
           %br/
-          = link_to "юбилеи", friendly_anniversary_path
+          = link_to_unless_current "юбилеи", friendly_anniversary_path
           %br/
-          = link_to "корпоративные мероприятия", friendly_corporate_path
+          = link_to_unless_current "корпоративные мероприятия", friendly_corporate_path
           %br/
-          = link_to "выпускные вечера", friendly_prom_path
+          = link_to_unless_current "выпускные вечера", friendly_prom_path
 
         %section.row
           %h1
-            = link_to "ЗАЛЫ", friendly_egyptian_hall_path
-          = link_to "египетский зал", friendly_egyptian_hall_path
+            = link_to_unless_current "залы", friendly_egyptian_hall_path
+          = link_to_unless_current "египетский зал", friendly_egyptian_hall_path
           %br/
-          = link_to "зеркальный зал", friendly_mirror_hall_path
+          = link_to_unless_current "зеркальный зал", friendly_mirror_hall_path
+          %br/
+          = link_to_unless_current "малый зал", friendly_small_hall_path
 
         %section.row
           %h1
-            = link_to "НАШИ УСЛУГИ", friendly_order_path
-          = link_to "заказ банкета", friendly_order_path
+            = link_to_unless_current "наши услуги", friendly_order_path
+          = link_to_unless_current "заказ банкета", friendly_order_path
           %br/
-          = link_to 'бронирование даты', friendly_reservation_path
+          = link_to_unless_current 'бронирование даты', friendly_reservation_path
+          %br/
+          = link_to_unless_current 'меню', "#"
           %br/
           = link_to_unless_current 'сервировка', friendly_serving_path
           %br/
           = link_to_unless_current 'обслуживание', friendly_service_path
           %br/
           = link_to_unless_current 'дополнительные услуги', friendly_additional_service_path
-
-        %section.row
-          %h1
-            = link_to "НАШИ РЕКОМЕНДАЦИИ", "#"
-          ведущие
           %br/
-          фотографы
-          %br/
-          оформители
-          %br/
-          кондитеры
+          = link_to_unless_current 'акции', friendly_sales_path
 
         %section.row
           %h1
-            = link_to "ГАЛЕРЕЯ", friendly_gallery_path
+            = link_to_unless_current "наши рекомендации", recommendations_path(SpecialPage.find_by(url: :show_presenters))
+
+          - %w(show_presenters decorators photographers videographers stylists candy_makers).each do |special_page|
+            = link_to_unless_current t("enumerize.special_page.url.#{special_page}"), recommendations_path(SpecialPage.find_by(url: special_page))
+            %br/
 
         %section.row
           %h1
-            = link_to "ОТЗЫВЫ", friendly_feedback_path
+            = link_to_unless_current "галерея", friendly_gallery_path
 
         %section.row
           %h1
-            = link_to "КОНТАКТЫ", friendly_contacts_path
+            = link_to_unless_current "отзывы", friendly_feedback_path
 
+        %section.row
+          %h1
+            = link_to_unless_current "контакты", friendly_contacts_path
+          .social
+            = link_to image_tag('footer/vk.png'), 'https://vk.com/kleopatra_banketholl'
+            = link_to image_tag('footer/instagram.png'), 'https://instagram.com/kleopatra_banketholl'
+            = mail_to 'banketvkleopatre@gmail.com', image_tag('footer/mail.png')
+          
     = content_for(:javascript)

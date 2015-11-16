@@ -37,6 +37,7 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'bourbon'
 gem 'neat', '~> 1.5.0'
 gem 'font-awesome-rails', '~> 4.0.3'
+gem 'bootstrap-sass', '~> 3.3.5'
 
 gem 'capistrano', '2.13.5'
 gem 'unicorn'
@@ -49,10 +50,10 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 
 gem 'carrierwave'
-gem 'rmagick'
+gem 'rmagick', require: false
 
 gem 'pry'
-
+gem 'active_admin_editor'
 gem 'enumerize'
 
 # Use ActiveModel has_secure_password

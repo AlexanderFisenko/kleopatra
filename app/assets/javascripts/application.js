@@ -17,6 +17,8 @@
 //= require jquery.fancybox-thumbs
 //= require jquery.scrollUp.min
 //= require contacts
+//= require jquery
+//= require bootstrap-sprockets
 //= require_tree
 
 
@@ -73,5 +75,15 @@ $(document).ready(function(){
       }
     }
   });
+
+  $('#footer .social img').mouseover(function(){
+    $(this).stop().animate({
+        top: 40    
+    }, 200);                        
+    }).mouseout(function(){
+        $(this).stop().animate({
+            top: 10
+        }, 200)    
+    })
 
 });
