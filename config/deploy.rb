@@ -21,6 +21,12 @@ set :scm, "git"
 set :repository, "git@github.com:AlexanderFisenko/#{application}.git"
 set :branch, "master"
 
+set :ssh_options, {
+  forward_agent: true,
+  port: 22,
+  auth_methods: ['publickey']
+}
+
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
