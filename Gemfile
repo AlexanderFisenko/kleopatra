@@ -53,9 +53,9 @@ gem 'carrierwave'
 gem 'rmagick', require: false
 
 gem 'pry'
-gem 'active_admin_editor'
-gem 'ckeditor'
 gem 'enumerize'
+gem 'activeadmin-dragonfly', github: 'stefanoverna/activeadmin-dragonfly'
+gem 'activeadmin-wysihtml5', github: 'stefanoverna/activeadmin-wysihtml5'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

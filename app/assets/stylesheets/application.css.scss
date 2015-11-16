@@ -22,7 +22,6 @@
 @import	'jquery.fancybox-thumbs';
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "active_admin/editor/wysiwyg";
 
 $mobile: new-breakpoint(min-width 320px max-width 960px 12);
 $desktop: new-breakpoint(min-width 960px 12);

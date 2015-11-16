@@ -15,6 +15,23 @@ GIT
       ransack (~> 1.0)
       sass-rails
 
+GIT
+  remote: git://github.com/stefanoverna/activeadmin-dragonfly.git
+  revision: 611164ff0255c66a3e555b5d46dd99f0eff1f115
+  specs:
+    activeadmin-dragonfly (0.0.2)
+      activeadmin
+      dragonfly (= 0.9.15)
+      rack-cache
+
+GIT
+  remote: git://github.com/stefanoverna/activeadmin-wysihtml5.git
+  revision: cf609b7bd4331866a261bd04da81fd84b80d9469
+  specs:
+    activeadmin-wysihtml5 (1.0.0)
+      activeadmin
+      activeadmin-dragonfly
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -31,10 +48,6 @@ GEM
       activesupport (= 4.1.0.rc1)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    active_admin_editor (1.1.0)
-      activeadmin (>= 0.4.0)
-      ejs
-      rails (>= 3.0.0)
     active_link_to (1.0.2)
       actionpack
     activemodel (4.1.0.rc1)
@@ -75,13 +88,6 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
-    ckeditor (4.1.4)
-      cocaine
-      orm_adapter (~> 0.5.0)
-    climate_control (0.0.3)
-      activesupport (>= 3.0)
-    cocaine (0.5.7)
-      climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -96,7 +102,9 @@ GEM
       railties (>= 3.2.6, < 5)
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    ejs (1.1.1)
+    dragonfly (0.9.15)
+      multi_json (~> 1.0)
+      rack
     enumerize (0.8.0)
       activesupport (>= 3.2)
     erubis (2.7.0)
@@ -164,6 +172,8 @@ GEM
       method_source (~> 0.8)
       slop (~> 3.4)
     rack (1.5.2)
+    rack-cache (1.5.1)
+      rack (>= 0.4)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.1.0.rc1)
@@ -241,14 +251,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_admin_editor
   active_link_to
   activeadmin!
+  activeadmin-dragonfly!
+  activeadmin-wysihtml5!
   bootstrap-sass (~> 3.3.5)
   bourbon
   capistrano (= 2.13.5)
   carrierwave
-  ckeditor
   coffee-rails (~> 4.0.0)
   devise
   enumerize
