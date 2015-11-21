@@ -1,5 +1,11 @@
 ActiveAdmin.setup do |config|
 
+  Rails.application.config.after_initialize do
+    javascripts = [] 
+    javascripts += ActiveAdmin.application.javascripts.to_a
+    ActiveAdmin.application.javascripts.replace javascripts
+  end
+
   # == Site Title
   #
   # Set the title that is displayed on the main layout
