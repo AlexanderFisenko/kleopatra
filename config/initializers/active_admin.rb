@@ -1,11 +1,5 @@
 ActiveAdmin.setup do |config|
 
-  Rails.application.config.after_initialize do
-    javascripts = [] 
-    javascripts += ActiveAdmin.application.javascripts.to_a
-    ActiveAdmin.application.javascripts.replace javascripts
-  end
-
   # == Site Title
   #
   # Set the title that is displayed on the main layout
@@ -168,7 +162,7 @@ ActiveAdmin.setup do |config|
   # and feel.
   #
   # To load a stylesheet:
-    config.register_stylesheet 'redactor.css'
+    config.register_stylesheet 'active_admin/redactor.css'
   #
   # You can provide an options hash for more control, which is passed along to stylesheet_link_tag():
   #   config.register_stylesheet 'my_print_stylesheet.css', :media => :print

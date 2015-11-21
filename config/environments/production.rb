@@ -59,7 +59,7 @@ Rails.application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  config.assets.precompile += %w( active_admin.js active_admin.css active_admin/print.css )
+  config.assets.precompile += %w( active_admin/redactor.js active_admin/redactor_ru.js active_admin/active_admin.js active_admin/redactor.css )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
