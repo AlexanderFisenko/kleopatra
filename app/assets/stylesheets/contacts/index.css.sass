@@ -2,7 +2,7 @@ article#contacts-index
   margin-bottom: 20px
   @include row
   section.wrapper
-    @include span-columns(2 of 3)
+    @include span-columns(17 of 30)
     margin-top: 30px
     margin-right: 10px
     section#map
@@ -11,8 +11,8 @@ article#contacts-index
       border: 1px solid orange
       margin: 0 auto
   section.contacts
-    @include span-columns(1 of 3)
-    margin-top: 40px
+    @include span-columns(13 of 30)
+    margin-top: 23px
     .element
       padding: 8px 0
       h1
@@ -22,7 +22,15 @@ article#contacts-index
         font-size: 19px
         text-align: left
         padding: 0
+        margin-top: 0
       p
         text-align: left
         font-size: 18px
+        img
+          width: 30px
+          padding: 0 2px
+      &:nth-child(2), &:nth-child(3)
+        p
+          line-height: 1
+          margin-bottom: 0
 

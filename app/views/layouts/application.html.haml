@@ -130,18 +130,21 @@
             = link_to_unless_current 'акции', friendly_sales_path
 
         %section{class: 'secondary-nav', id: 'recommendations', data: {secondary_nav: "recommendations"}}
-          %section.unit
-            = link_to_unless_current 'ведущие', recommendations_path(SpecialPage.find_by(url: :show_presenters))
-          %section.unit
-            = link_to_unless_current 'оформители', recommendations_path(SpecialPage.find_by(url: :decorators))
-          %section.unit
-            = link_to_unless_current 'фотографы', recommendations_path(SpecialPage.find_by(url: :photographers))
-          %section.unit
-            = link_to_unless_current 'видеографы', recommendations_path(SpecialPage.find_by(url: :videographers))
-          %section.unit
-            = link_to_unless_current 'стилисты', recommendations_path(SpecialPage.find_by(url: :stylists))
-          %section.unit
-            = link_to_unless_current 'кондитеры', recommendations_path(SpecialPage.find_by(url: :candy_makers))
+          - %w(show_presenters decorators photographers videographers stylists candy_makers).each do |special_page|
+            %section.unit
+              = link_to_unless_current t("enumerize.special_page.url.#{special_page}"), recommendations_path(SpecialPage.find_by(url: special_page))
+          -# %section.unit
+          -#   = link_to_unless_current 'ведущие', recommendations_path(SpecialPage.find_by(url: :show_presenters))
+          -# %section.unit
+          -#   = link_to_unless_current 'декораторы', recommendations_path(SpecialPage.find_by(url: :decorators))
+          -# %section.unit
+          -#   = link_to_unless_current 'фотографы', recommendations_path(SpecialPage.find_by(url: :photographers))
+          -# %section.unit
+          -#   = link_to_unless_current 'видеографы', recommendations_path(SpecialPage.find_by(url: :videographers))
+          -# %section.unit
+          -#   = link_to_unless_current 'стилисты', recommendations_path(SpecialPage.find_by(url: :stylists))
+          -# %section.unit
+          -#   = link_to_unless_current 'кондитеры', recommendations_path(SpecialPage.find_by(url: :candy_makers))
 
         %section{class: 'secondary-nav', id: 'secondary-nav-substitude', data: {secondary_nav: "substitude"}}
 
@@ -217,8 +220,8 @@
           %h1
             = link_to_unless_current "контакты", friendly_contacts_path
           .social
-            = link_to image_tag('footer/vk.png'), 'https://vk.com/kleopatra_banketholl'
-            = link_to image_tag('footer/instagram.png'), 'https://instagram.com/kleopatra_banketholl'
+            = link_to image_tag('footer/vk.png'), 'https://vk.com/kleopatra_banketholl', target: '_blank'
+            = link_to image_tag('footer/instagram.png'), 'https://instagram.com/kleopatra_banketholl', target: '_blank'
             = mail_to 'banketvkleopatre@gmail.com', image_tag('footer/mail.png')
           
     = content_for(:javascript)

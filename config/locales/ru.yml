@@ -6,7 +6,7 @@ ru:
     special_page:
       url:
         show_presenters: "Ведущие"
-        decorators: "Оформители"
+        decorators: "Декораторы"
         photographers: "Фотографы"
         videographers: "Видеографы"
         stylists: "Стилисты"
