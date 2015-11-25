@@ -1,0 +1,13 @@
+#sales
+  .special-pages-content
+    @include row
+    .special-pages-row
+      @include span-columns(6 of 12)
+      .special-page
+        @include row
+        margin-bottom: 20px
+        .special-page-content
+          @include span-columns(6 of 12)
+          @include media($mobile)
+            p
+              font-size: 8px
