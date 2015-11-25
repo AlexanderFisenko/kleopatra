@@ -8,6 +8,11 @@
         margin-bottom: 20px
         .special-page-content
           @include span-columns(6 of 12)
-          @include media($mobile)
-            p
+
+          li, p, .caption
+            @include media($mobile)
               font-size: 8px
+            @include media($desktop)
+              font-size: 14px
+          
+  
